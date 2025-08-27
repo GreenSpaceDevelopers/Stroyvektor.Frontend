@@ -1,23 +1,22 @@
 @use './functions' as *;
 
 // Accent colors
-$color-primary-dark: #1F1F1F;
+$color-primary-dark: #1f1f1f;
 
 $color-text: #000;
 $color-text-dark: #fff;
-$color-text-muted: #8E8C8C;
+$color-text-muted: #8e8c8c;
 $color-text-muted-light: #878787;
 
 // Fonts
-$font-tektur: 'Tektur', sans-serif;
-$font-jura: 'Jura', sans-serif;
-$font-raleway: 'Raleway', sans-serif;
-$font-inter: 'Inter', sans-serif;
+$font-oswald: 'Oswald', sans-serif;
+$font-pt-sans: 'PT Sans', sans-serif;
 
 $font-size-xs: 10px;
-$font-size-sm: 16px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
 $font-size-md: 32px;
-$font-size-lg: 80px;
+$font-size-lg: 60px;
 $font-size-xl: 64px;
 
 $font-weight-500: 500;
@@ -25,8 +24,10 @@ $font-weight-600: 600;
 $font-weight-700: 700;
 
 // Breakpoints
-$breakpoint-desktop: 1440px;
-$breakpoint-laptop: 1278px;
-$breakpoint-tablet-l: 1022px;
-$breakpoint-tablet-s: 766px;
-$breakpoint-phone: 320px;
+$breakpoint-laptop: 1279px;
+$breakpoint-tablet-l: 1023px;
+$breakpoint-tablet-s: 767px;
+$breakpoint-phone: 575px;
+$breakpoint-phone-s: 320px;
+
+$bg-blur: 8%;
