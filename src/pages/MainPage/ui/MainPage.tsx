@@ -1,4 +1,4 @@
-import { AboutUs, Header, Services } from './components';
+import { AboutUs, FormBlock, Header, Services } from './components';
 import styles from './MainPage.module.scss';
 
 export const MainPage: React.FC = () => {
@@ -7,6 +7,7 @@ export const MainPage: React.FC = () => {
             <Header />
             <AboutUs />
             <Services />
+            <FormBlock />
         </div>
     );
 };

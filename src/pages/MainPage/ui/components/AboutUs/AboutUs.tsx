@@ -16,28 +16,28 @@ export const AboutUs: React.FC = () => {
             <h3>Почему мы?</h3>
 
             <div className={styles.desc}>
-                <text className={styles.descBlock}>
+                <p className={styles.descBlock}>
                     Каждый проект для нас — это уникальная история, в которой важно всё: от первой
                     встречи до последнего штриха. Мы работаем так, чтобы результат не только
                     соответствовал вашим ожиданиям, но и превосходил их.
-                </text>
+                </p>
 
-                <text className={styles.descBlock}>
+                <p className={styles.descBlock}>
                     Нам доверяют сложные задачи, потому что мы умеем превращать идеи в реальные
                     пространства, где комфорт и эстетика идут рука об руку с надёжностью.
                     {width > 575 ? <br /> : undefined} В основе нашей работы — чёткие процессы,
                     внимание к деталям и умение находить лучшие решения в любых условиях.
-                </text>
+                </p>
             </div>
 
             <div className={styles.stats}>
                 {width > 575 && <img className={styles.line1} src={headerLine1Url} alt="" />}
                 <div className={styles.stat}>
                     <h4>9</h4>
-                    <text>
+                    <p>
                         лет опыта
                         <br /> в индустрии
-                    </text>
+                    </p>
                 </div>
                 <img
                     className={styles.line2}
@@ -46,10 +46,10 @@ export const AboutUs: React.FC = () => {
                 />
                 <div className={styles.stat}>
                     <h4>100+</h4>
-                    <text>
+                    <p>
                         профессионалов
                         <br /> в команде
-                    </text>
+                    </p>
                 </div>
                 <img
                     className={styles.line3}
@@ -58,10 +58,10 @@ export const AboutUs: React.FC = () => {
                 />
                 <div className={styles.stat}>
                     <h4>300+</h4>
-                    <text>
+                    <p>
                         проектов
                         <br /> реализовано
-                    </text>
+                    </p>
                 </div>
                 <img
                     className={styles.line4}
@@ -70,10 +70,10 @@ export const AboutUs: React.FC = () => {
                 />
                 <div className={styles.stat}>
                     <h4>20</h4>
-                    <text>
+                    <p>
                         текущих
                         <br /> проектов
-                    </text>
+                    </p>
                 </div>
                 <img
                     className={styles.line5}
@@ -82,10 +82,10 @@ export const AboutUs: React.FC = () => {
                 />
                 <div className={styles.stat}>
                     <h4>4,9</h4>
-                    <text>
+                    <p>
                         средняя оценка
                         <br /> клиентов
-                    </text>
+                    </p>
                 </div>
                 {width > 575 && <img className={styles.line5} src={headerLine5Url} alt="" />}
             </div>

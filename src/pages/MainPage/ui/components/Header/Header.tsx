@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
         <header className={styles.header}>
             <div className={styles.headerUpper}>
                 <img src={headerLine1Url} alt="" />
-                <text>Чёткие сроки, прозрачная смета и премиальное качество исполнения</text>
+                <p>Чёткие сроки, прозрачная смета и премиальное качество исполнения</p>
             </div>
 
             <div className={styles.headerBottom}>
@@ -24,16 +24,16 @@ export const Header: React.FC = () => {
                 )}
 
                 <div className={styles.desc}>
-                    <text className={styles.descBlock}>
+                    <p className={styles.descBlock}>
                         Опытная команда, реализующая проекты любой сложности — от квартир
                         до масштабных коммерческих объектов
-                    </text>
+                    </p>
 
                     {width > 575 && (
-                        <text className={styles.descBlock}>
+                        <p className={styles.descBlock}>
                             Полный цикл работ: от концепции и дизайна до сдачи готового пространства
                             «под ключ»
-                        </text>
+                        </p>
                     )}
                 </div>
             </div>

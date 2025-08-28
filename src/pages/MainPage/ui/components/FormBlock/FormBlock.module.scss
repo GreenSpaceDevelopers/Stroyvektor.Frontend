@@ -1,0 +1,61 @@
+.formBlock {
+    position: relative;
+    height: 1033px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    background-image: url(../../../assets/form/formBg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-bottom: 160px;
+    padding: 160px 80px;
+
+    display: flex;
+}
+
+.formBlock::before {
+    content: '';
+    height: 1033px;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.formBlock > * {
+    position: relative;
+    z-index: 2;
+}
+
+.formBlockTitles {
+    width: 50%;
+    text-align: center;
+
+    .formBlockTitle {
+        font-size: $font-size-xl;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+    }
+}
+
+.formBlockForm {
+    width: 50%;
+    text-align: center;
+    padding: 0 29px;
+}
+
+@media (max-width: $breakpoint-laptop) {
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+}
+
+@media (max-width: $breakpoint-phone) {
+}

@@ -6,6 +6,13 @@
     height: auto;
 }
 
+.appLoading {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+}
+
 @media (width <= 1279px) {
     .appContent {
         max-width: 984px;
