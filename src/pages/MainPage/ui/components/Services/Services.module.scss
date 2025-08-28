@@ -1,0 +1,240 @@
+.services {
+    position: relative;
+    height: 1594px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    background-image: url(../../../assets/services/servicesBg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-bottom: 160px;
+    padding: 160px 84px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services::before {
+    content: '';
+    height: 1594px;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.services > * {
+    position: relative;
+    z-index: 2;
+}
+
+.services {
+    .servicesTitle {
+        width: 100%;
+        text-transform: uppercase;
+        font-size: $font-size-xl;
+        margin-bottom: 48px;
+    }
+}
+
+.servicesBlocks {
+    width: 1272px;
+    height: 582px;
+    margin-bottom: 48px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.servicesAdditional {
+    width: 1272px;
+    height: 544px;
+    padding: 24px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .servicesAdditionalTitle {
+        font-size: $font-size-md;
+        text-transform: uppercase;
+    }
+
+    .servicesAdditionalRaw {
+        display: flex;
+        flex-direction: column;
+
+        .servicesAdditionalRawTitle {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .servicesAdditionalRawHeader {
+            display: flex;
+            justify-content: space-between;
+
+            .servicesAdditionalRawTitle {
+                text-transform: uppercase;
+            }
+        }
+
+        .servicesAdditionalRawImg {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .servicesAdditionalRawSubtitle {
+            color: $color-text-muted;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .servicesBlocks {
+        width: 984px;
+        height: 691px;
+    }
+
+    .services {
+        height: 1700px;
+        padding: 160px 144px;
+
+        .servicesTitle {
+            font-size: $font-size-lg;
+        }
+    }
+
+    .services::before {
+        height: 1700px;
+    }
+
+    .servicesAdditional {
+        width: 984px;
+        height: 544px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .servicesBlocks {
+        width: 744px;
+        height: 633px;
+    }
+
+    .services {
+        height: 1576px;
+        padding: 140px 139px;
+
+        .servicesTitle {
+            font-size: 48px;
+        }
+    }
+
+    .services::before {
+        height: 1576px;
+    }
+
+    .servicesAdditional {
+        width: 744px;
+        height: 527px;
+
+        .servicesAdditionalTitle {
+            font-size: 24px;
+        }
+
+        .servicesAdditionalRaw {
+            .servicesAdditionalRawTitle {
+                font-size: 14px;
+            }
+
+            .servicesAdditionalRawSubtitle {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+    .servicesBlocks {
+        width: 540px;
+        height: auto;
+    }
+
+    .services {
+        height: 2011px;
+        padding: 140px 113px;
+
+        .servicesTitle {
+            font-size: 40px;
+        }
+    }
+
+    .services::before {
+        height: auto;
+    }
+
+    .servicesBlocks {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .servicesAdditional {
+        width: 540px;
+        height: 527px;
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .servicesBlocks {
+        width: 100%;
+        height: auto;
+    }
+
+    .services {
+        padding: 120px 10px;
+
+        .servicesTitle {
+            font-size: $font-size-md;
+        }
+    }
+
+    .servicesBlocks {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .servicesAdditional {
+        width: 100%;
+        height: 460px;
+        padding: 16px;
+
+        .servicesAdditionalTitle {
+            font-size: 20px;
+        }
+
+        .servicesAdditionalRaw {
+            .servicesAdditionalRawTitle {
+                font-size: 12px;
+            }
+
+            .servicesAdditionalRawHeader {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .servicesAdditionalRawSubtitle {
+                font-size: 12px;
+            }
+        }
+    }
+}

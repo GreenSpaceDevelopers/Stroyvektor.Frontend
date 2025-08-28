@@ -3,6 +3,7 @@
     max-width: 1272px;
     margin-inline: auto;
     min-height: 100vh;
+    height: auto;
 }
 
 @media (width <= 1279px) {

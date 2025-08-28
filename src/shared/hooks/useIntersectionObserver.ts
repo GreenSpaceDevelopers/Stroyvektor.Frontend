@@ -9,13 +9,13 @@ const useIntersectionObserver = (selector: string, className: string, threshold:
                 }
             });
         }
-        
+
         const options = { threshold: [threshold] };
         const observer = new IntersectionObserver(onEntry, options);
-        
+
         const elements = document.querySelectorAll(selector);
         elements.forEach((elm) => observer.observe(elm));
-        
+
         return () => observer.disconnect();
     }, [selector, className, threshold]);
 };
