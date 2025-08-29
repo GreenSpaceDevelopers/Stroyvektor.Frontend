@@ -1,3 +1,4 @@
+export { MapBlock } from './MapBlock/MapBlock';
 export { FormBlock } from './FormBlock/FormBlock';
 export { Services } from './Services/Services';
 export { AboutUs } from './AboutUs/AboutUs';

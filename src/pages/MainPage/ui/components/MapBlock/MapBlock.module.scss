@@ -1,0 +1,46 @@
+.mapBlock {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 160px;
+}
+
+.mapBlockTitle {
+    text-transform: uppercase;
+    font-size: $font-size-xl;
+    line-height: $font-size-xl;
+    font-weight: normal;
+}
+
+.mapBlockContent {
+    height: 353px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 68px;
+
+    .mapBlockInfo {
+        display: flex;
+
+        .mapBlockInfoDesc {
+            display: flex;
+            flex-direction: column;
+
+            > p {
+                margin-bottom: 48px;
+            }
+
+            > span {
+                margin-bottom: 24px;
+            }
+
+            > span:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.yandexMap {
+    border: none;
+}
