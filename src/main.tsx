@@ -5,12 +5,15 @@ import weekday from 'dayjs/plugin/weekday';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
+import { MantineProvider } from '@mantine/core';
+
 import 'dayjs/locale/ru';
 import App from './app/App';
 
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import '@mantine/dates/styles.css';
+import '@mantine/notifications/styles.css';
 import './index.css';
 
 dayjs.locale('ru');
@@ -41,6 +44,8 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
     <BrowserRouter>
-        <App />
+        <MantineProvider>
+            <App />
+        </MantineProvider>
     </BrowserRouter>,
 );

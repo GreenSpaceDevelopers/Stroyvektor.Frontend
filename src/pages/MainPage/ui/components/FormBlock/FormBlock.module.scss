@@ -32,13 +32,23 @@
 
 .formBlockTitles {
     width: 50%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
 
     .formBlockTitle {
         font-size: $font-size-xl;
         line-height: 1;
         text-transform: uppercase;
         margin-bottom: 48px;
+        text-align: start;
+        font-weight: normal;
+    }
+
+    .formBlockSubtitle {
+        width: 396px;
+        text-align: start;
     }
 }
 
@@ -49,13 +59,87 @@
 }
 
 @media (max-width: $breakpoint-laptop) {
+    .formBlockTitles {
+        text-align: center;
+
+        .formBlockSubtitle {
+            width: 396px;
+        }
+
+        .formBlockTitle {
+            width: 396px;
+        }
+    }
 }
 
 @media (max-width: $breakpoint-tablet-l) {
+    .formBlock {
+        justify-content: center;
+        height: 928px;
+        padding: 120px 140px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formBlock::before {
+        height: 928px;
+    }
+
+    .formBlockTitles {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 48px;
+
+        .formBlockSubtitle {
+            width: 100%;
+        }
+
+        .formBlockTitle {
+            font-size: 40px;
+            width: 100%;
+        }
+    }
+
+    .formBlockForm {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 @media (max-width: $breakpoint-tablet-s) {
+    .formBlock {
+        height: 1063px;
+        padding: 140px 113px;
+    }
+
+    .formBlock::before {
+        height: 1063px;
+    }
+
+    .formBlockTitles {
+        margin-bottom: 24px;
+
+        .formBlockTitle {
+            margin-bottom: 24px;
+        }
+    }
 }
 
 @media (max-width: $breakpoint-phone) {
+    .formBlock {
+        height: 1106px;
+        padding: 80px 10px;
+    }
+
+    .formBlock::before {
+        height: 1106px;
+    }
+
+    .formBlockTitles {
+        width: 100%;
+
+        .formBlockTitle {
+            font-size: 32px;
+        }
+    }
 }

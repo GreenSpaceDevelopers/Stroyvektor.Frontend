@@ -3,6 +3,10 @@
     background: #fff;
     padding: 24px;
     max-width: 628px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .formHeader {
@@ -15,37 +19,53 @@
 
     .formHeaderImg {
         width: 100%;
-        margin: 20px 0;
+        margin: 20px 0 10px 0;
     }
 }
 
 .formInputs {
-    margin-bottom: 40px;
+    .formInputRoot {
+        text-align: left;
+    }
+
+    .formInputRoot:first-child {
+        margin-bottom: 12px;
+    }
 
     .formInput {
         width: 100%;
-        border-radius: 10px;
-        padding: 15px 14px;
+        border-radius: 8px;
         border: 1px solid #5d5d5d;
         outline: none;
         color: #5d5d5d;
+        text-align: start;
     }
 
-    .formInput:first-child {
-        margin-bottom: 12px;
+    .formInput::placeholder {
+        font-family: $font-pt-sans;
+    }
+
+    .formInputLabel {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .formInputError {
+        font-size: 12px;
+        color: red;
+        border-color: red;
     }
 }
 
 .formMessengers {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
 
     .formMessengersTitle {
         font-size: 20px;
         font-weight: 500;
         color: #000;
-        margin-bottom: 24px;
+        margin-bottom: 10px;
         text-align: start;
     }
 
@@ -59,7 +79,7 @@
             margin-right: 12px;
             border: 1px solid #5d5d5d;
             color: #5d5d5d;
-            border-radius: 10px;
+            border-radius: 8px;
             height: 43px;
             align-content: center;
             background: transparent;
@@ -86,7 +106,7 @@
         font-size: 20px;
         font-weight: 500;
         color: #000;
-        margin-bottom: 24px;
+        margin-bottom: 10px;
         text-align: start;
     }
 
@@ -98,7 +118,7 @@
         .formTimesItem {
             border: 1px solid #5d5d5d;
             color: #5d5d5d;
-            border-radius: 10px;
+            border-radius: 8px;
             height: 43px;
             align-content: center;
             background: transparent;
@@ -114,13 +134,6 @@
 }
 
 .formFooter {
-    .formFooterTitle {
-        text-align: start;
-        text-transform: uppercase;
-        font-size: $font-size-md;
-        color: $color-text-dark;
-    }
-
     .formButtonBlock {
         display: flex;
         align-items: center;
@@ -148,6 +161,210 @@
 
     .formFooterImg {
         width: 100%;
-        margin: 20px 0 10px 0;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .formTimes {
+        display: flex;
+        flex-direction: column;
+
+        .formTimesTitle {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: start;
+        }
+
+        .formTimesItems {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+
+            > .formTimesItem:first-child {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    .formFooter {
+        .formButtonBlock {
+            .formButton {
+                width: 142px;
+            }
+
+            .formButtonDesk {
+                max-width: 262px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .formHeader {
+        .formHeaderTitle {
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .formHeaderImg {
+            margin: 10px 0 10px 0;
+        }
+    }
+
+    .form {
+        height: auto;
+        width: 100%;
+        max-width: none;
+    }
+
+    .formInputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .formInputRoot {
+            text-align: left;
+            width: 49%;
+        }
+    }
+
+    .formTimes {
+        .formTimesTitle {
+            font-size: 18px;
+        }
+
+        .formTimesItems {
+            grid-template-columns: repeat(4, 1fr);
+
+            > .formTimesItem:first-child {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .formMessengers {
+        margin-bottom: 20px;
+
+        .formMessengersTitle {
+            font-size: 18px;
+        }
+    }
+
+    .formFooter {
+        .formButtonBlock {
+            .formButton {
+                width: 240px;
+            }
+
+            .formButtonDesk {
+                max-width: 400px;
+            }
+        }
+
+        .formFooterImg {
+            margin: 20px 0 0 0;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+    .formTimes {
+        .formTimesItems {
+            grid-template-columns: repeat(2, 1fr);
+
+            > .formTimesItem:first-child {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .formFooter {
+        .formButtonBlock {
+            .formButton {
+                width: 146px;
+            }
+
+            .formButtonDesk {
+                max-width: 322px;
+            }
+        }
+
+        .formFooterImg {
+            margin: 20px 0 10px 0;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .formInputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .formInputRoot {
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    .formHeader {
+        .formHeaderTitle {
+            font-size: 24px;
+            color: 24px;
+        }
+
+        .formHeaderImg {
+            margin: 10px 0;
+        }
+    }
+
+    .formFooter {
+        .formButtonBlock {
+            height: auto;
+            flex-direction: column;
+
+            .formButton {
+                width: 100%;
+                height: 38px;
+                margin-bottom: 16px;
+                margin-right: 0;
+                font-size: 14px;
+            }
+
+            .formButtonDesk {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .formTimesItem {
+        font-size: 14px;
+    }
+
+    .formMessengers {
+        .formMessengersTitle {
+            font-size: 18px;
+        }
+
+        .formMessengersItems {
+            flex-wrap: wrap;
+            gap: 2%;
+            row-gap: 8px;
+
+            .formMessengersItem {
+                flex: none;
+                width: 49%;
+                margin-right: 0;
+                height: 40px;
+            }
+
+            .formMessengersItem:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }
