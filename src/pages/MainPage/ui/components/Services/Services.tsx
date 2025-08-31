@@ -9,7 +9,7 @@ import { blockContent1, blockContent2, blockContent3, blockContent4 } from './bl
 import styles from './Services.module.scss';
 
 export const Services: React.FC = () => {
-    const [hoveringService, setHoveringService] = useState<number | null>(null);
+    const [hoveringService, setHoveringService] = useState<number | null>(1);
     const device = useDeviceType();
     const isTouchDevice = device === 'mobile' || device === 'tablet';
 

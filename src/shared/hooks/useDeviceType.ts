@@ -10,7 +10,7 @@ export function useDeviceType(): Device {
             const width = window.innerWidth;
             const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-            if (isTouch && width <= 768) setDevice('mobile');
+            if (isTouch && width <= 767) setDevice('mobile');
             else if (isTouch && width <= 1024) setDevice('tablet');
             else setDevice('desktop');
         };

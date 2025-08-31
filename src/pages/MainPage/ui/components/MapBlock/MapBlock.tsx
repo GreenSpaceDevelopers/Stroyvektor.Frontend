@@ -1,0 +1,78 @@
+import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { PhoneIcon } from '@heroicons/react/24/solid';
+import useScreenWidth from '@shared/hooks/useScreenWidth';
+
+import MapBlockLine1Url from '../../../assets/mapBlock/mapBlockLine1.svg';
+import MapBlockLine2Url from '../../../assets/mapBlock/mapBlockLine2.svg';
+import styles from './MapBlock.module.scss';
+
+export const MapBlock: React.FC = () => {
+    const width = useScreenWidth();
+
+    const lat = 60.024459;
+    const lon = 30.276234;
+    const zoom = 17;
+
+    const ll = encodeURIComponent(`${lon},${lat}`);
+    const pt = `${lon},${lat},pm2rdm`;
+    const src = `https://yandex.ru/map-widget/v1/?ll=${ll}&z=${zoom}&pt=${pt}&theme=dark`;
+
+    return (
+        <div className={styles.mapBlock} style={{ borderRadius: 8, overflow: 'hidden' }}>
+            <h3 className={styles.mapBlockTitle}>Всегда на связи</h3>
+
+            {width <= 1023 && <img className={styles.mapBlockInfoLine2} src={MapBlockLine2Url} />}
+
+            <div className={styles.mapBlockContent}>
+                <div className={styles.mapBlockInfo}>
+                    {width > 1023 && (
+                        <img className={styles.mapBlockInfoLine} src={MapBlockLine1Url} />
+                    )}
+
+                    {width <= 1023 && (
+                        <p>
+                            Свяжитесь с нами удобным способом — мы ответим на вопросы, поможем
+                            рассчитать стоимость и договоримся о встрече
+                        </p>
+                    )}
+                    <div className={styles.mapBlockInfoDesc}>
+                        <div className={styles.links}>
+                            {width > 1023 && (
+                                <p>
+                                    Свяжитесь с нами удобным способом — мы ответим на вопросы,
+                                    поможем рассчитать стоимость и договоримся о встрече
+                                </p>
+                            )}
+
+                            <span>
+                                <MapPinIcon className={styles.mapBlockInfoDescIcon} />
+                                <a href="https://yandex.ru/maps/-/CLEVYEi9" target="_blank">
+                                    Санкт-Петербург, ул. Примерная, 15
+                                </a>
+                            </span>
+
+                            <span>
+                                <PhoneIcon className={styles.mapBlockInfoDescIcon} />
+                                <a href="+79939761660" type="tel">
+                                    +7 (999) 999-99-99
+                                </a>
+                            </span>
+                            <span>
+                                <EnvelopeIcon className={styles.mapBlockInfoDescIcon} />
+                                <a>info@stroyvector.ru</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <iframe
+                    className={styles.yandexMap}
+                    src={src}
+                    allowFullScreen
+                    loading="lazy"
+                    title="Карта Яндекс"
+                />
+            </div>
+        </div>
+    );
+};

@@ -9,32 +9,34 @@ export const Header: React.FC = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.headerUpper}>
-                <img src={headerLine1Url} alt="" />
-                <p>Чёткие сроки, прозрачная смета и премиальное качество исполнения</p>
-            </div>
+            <div className={styles.headerContent}>
+                <div className={styles.headerUpper}>
+                    <img src={headerLine1Url} alt="" />
+                    <p>Чёткие сроки, прозрачная смета и премиальное качество исполнения</p>
+                </div>
 
-            <div className={styles.headerBottom}>
-                <h1>Дома и интерьеры, достойные вас</h1>
+                <div className={styles.headerBottom}>
+                    <h1>Дома и интерьеры,{width <= 767 && <br />} достойные вас</h1>
 
-                {width > 575 ? (
-                    <img src={headerLine2Url} alt="" />
-                ) : (
-                    <img src={headerLine2Url} alt="" />
-                )}
-
-                <div className={styles.desc}>
-                    <p className={styles.descBlock}>
-                        Опытная команда, реализующая проекты любой сложности — от квартир
-                        до масштабных коммерческих объектов
-                    </p>
-
-                    {width > 575 && (
-                        <p className={styles.descBlock}>
-                            Полный цикл работ: от концепции и дизайна до сдачи готового пространства
-                            «под ключ»
-                        </p>
+                    {width > 575 ? (
+                        <img src={headerLine2Url} alt="" />
+                    ) : (
+                        <img src={headerLine2Url} alt="" />
                     )}
+
+                    <div className={styles.desc}>
+                        <p className={styles.descBlock}>
+                            Опытная команда, реализующая проекты любой сложности — от квартир
+                            до масштабных коммерческих объектов
+                        </p>
+
+                        {width > 575 && (
+                            <p className={styles.descBlock}>
+                                Полный цикл работ: от концепции и дизайна до сдачи готового
+                                пространства «под ключ»
+                            </p>
+                        )}
+                    </div>
                 </div>
             </div>
         </header>

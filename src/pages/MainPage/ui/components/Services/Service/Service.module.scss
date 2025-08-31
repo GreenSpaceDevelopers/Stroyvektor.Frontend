@@ -71,15 +71,15 @@
             transition: background 300ms linear;
 
             &.first {
-                color: #00000091;
+                color: rgba(0, 0, 0, 0.5);
                 background: transparent;
-                border: 1px solid #00000091;
+                border: 1px solid rgba(0, 0, 0, 0.5);
             }
 
             &.second {
                 color: $color-text;
-                border: 1px solid $color-text-dark;
-                background: #00000091;
+                border: none;
+                background: rgba(0, 0, 0, 0.5);
             }
 
             &.hovering {
