@@ -1,10 +1,16 @@
-import { MapPinIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { PhoneIcon } from '@heroicons/react/24/solid';
+import MapBlockLine1Url from '../../../assets/mapBlock/mapBlockLine1.svg';
+import MapBlockLine2Url from '../../../assets/mapBlock/mapBlockLine2.svg';
 
 import styles from './MapBlock.module.scss';
+import useScreenWidth from '@shared/hooks/useScreenWidth';
 
 export const MapBlock: React.FC = () => {
-    const lat = 59.936043;
-    const lon = 30.337548;
+    const width = useScreenWidth();
+
+    const lat = 60.024459;
+    const lon = 30.276234;
     const zoom = 17;
 
     const ll = encodeURIComponent(`${lon},${lat}`);
@@ -14,32 +20,64 @@ export const MapBlock: React.FC = () => {
     return (
         <div className={styles.mapBlock} style={{ borderRadius: 8, overflow: 'hidden' }}>
             <h3 className={styles.mapBlockTitle}>Всегда на связи</h3>
+
+            {width <= 1023 && <img className={styles.mapBlockInfoLine2} src={MapBlockLine2Url} />}
+
             <div className={styles.mapBlockContent}>
                 <div className={styles.mapBlockInfo}>
-                    <div className={styles.mapBlockInfoDesc}>
+                    {width > 1023 && (
+                        <img className={styles.mapBlockInfoLine} src={MapBlockLine1Url} />
+                    )}
+
+                    {width <= 1023 && (
                         <p>
                             Свяжитесь с нами удобным способом — мы ответим на вопросы, поможем
                             рассчитать стоимость и договоримся о встрече
                         </p>
+                    )}
+                    <div className={styles.mapBlockInfoDesc}>
+                        <div className={styles.links}>
+                            {width > 1023 && (
+                                <p>
+                                    Свяжитесь с нами удобным способом — мы ответим на вопросы,
+                                    поможем рассчитать стоимость и договоримся о встрече
+                                </p>
+                            )}
 
-                        <span>
-                            <MapPinIcon width={24} />
-                            <a>Санкт-Петербург, ул. Примерная, 15</a>
-                        </span>
-                        <span>
-                            <a>+7 (999) 999-99-99</a>
-                        </span>
-                        <span>
-                            <a>info@stroyvector.ru</a>
-                        </span>
+                            <span>
+                                <MapPinIcon className={styles.mapBlockInfoDescIcon} />
+                                <a href="https://yandex.ru/maps/-/CLEVYEi9" target="_blank">
+                                    Санкт-Петербург, ул. Примерная, 15
+                                </a>
+                            </span>
+
+                            <span>
+                                <PhoneIcon className={styles.mapBlockInfoDescIcon} />
+                                <a href="+79939761660" type="tel">
+                                    +7 (999) 999-99-99
+                                </a>
+                            </span>
+                            <span>
+                                <EnvelopeIcon className={styles.mapBlockInfoDescIcon} />
+                                <a>info@stroyvector.ru</a>
+                            </span>
+                        </div>
+
+                        <div className={styles.scheduleBlock}>
+                            <p>График работы:</p>
+
+                            <div>
+                                <p>Пн–Пт: 10:00 – 20:00</p>
+                                <p>Сб: 11:00 – 17:00</p>
+                                <p>Вс: выходной</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <iframe
                     className={styles.yandexMap}
                     src={src}
-                    width={730}
-                    height={353}
                     allowFullScreen
                     loading="lazy"
                     title="Карта Яндекс"

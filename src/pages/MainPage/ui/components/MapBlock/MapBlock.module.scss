@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 160px;
+    border-radius: 0 !important;
 }
 
 .mapBlockTitle {
@@ -17,30 +18,303 @@
     height: 353px;
     display: flex;
     justify-content: space-between;
-    margin-right: 68px;
 
     .mapBlockInfo {
         display: flex;
 
         .mapBlockInfoDesc {
-            display: flex;
-            flex-direction: column;
+            .links {
+                > p {
+                    margin-bottom: 48px;
+                }
 
-            > p {
-                margin-bottom: 48px;
+                > span {
+                    margin-bottom: 24px;
+                    display: flex;
+                    align-items: center;
+
+                    .mapBlockInfoDescIcon {
+                        width: 24px;
+                        margin-right: 12px;
+                    }
+                }
+
+                > span:last-child {
+                    margin-bottom: 48px;
+                }
             }
 
-            > span {
-                margin-bottom: 24px;
-            }
+            .scheduleBlock {
+                display: flex;
 
-            > span:last-child {
-                margin-bottom: 0;
+                > p {
+                    font-weight: bold;
+                    margin-right: 24px;
+                }
+
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
             }
         }
     }
 }
 
 .yandexMap {
+    width: 730px;
+    height: 353px;
     border: none;
+    margin-left: 68px;
+    border-radius: 0;
+}
+
+.mapBlockInfoLine {
+    height: 100%;
+    margin-right: 16px;
+}
+
+.mapBlockInfoLine2 {
+    margin: 20px 0 !important;
+    width: 100%;
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .mapBlockTitle {
+        font-size: $font-size-lg;
+        line-height: $font-size-lg;
+    }
+
+    .mapBlockContent {
+        height: 350px;
+    }
+
+    .mapBlockInfo {
+        width: 455px;
+    }
+
+    .yandexMap {
+        width: 480px;
+        height: 300px;
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .mapBlock {
+        height: 605px;
+        margin-bottom: 140px;
+    }
+
+    .mapBlockTitle {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .mapBlockContent {
+        height: auto;
+        flex-direction: column;
+        font-size: $font-size-sm;
+    }
+
+    .mapBlockInfo {
+        width: 100%;
+        flex-direction: column;
+
+        > p {
+            margin-bottom: 40px;
+        }
+    }
+
+    .mapBlockInfoDesc {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .scheduleBlock {
+        flex-direction: column;
+        height: 120px;
+
+        > p {
+            margin-bottom: 24px;
+            margin-right: 0 !important;
+        }
+
+        > div {
+            height: 78px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            > p {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+    .yandexMap {
+        width: 100%;
+        height: 270px;
+        margin-left: 0;
+    }
+
+    .links {
+        width: 300px;
+        height: 120px;
+        margin-right: 84px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+    .mapBlock {
+        height: 555px;
+        margin-bottom: 140px;
+    }
+
+    .mapBlockTitle {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .mapBlockContent {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .mapBlockInfo {
+        width: 100%;
+        flex-direction: column;
+
+        > p {
+            margin-bottom: 40px;
+            width: 429px;
+        }
+    }
+
+    .mapBlockInfoDesc {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .scheduleBlock {
+        flex-direction: column;
+        > p {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+
+        > div {
+            height: 78px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            > p {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+    .yandexMap {
+        height: 225px;
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .mapBlock {
+        height: auto;
+        margin-bottom: 120px;
+    }
+
+    .mapBlockTitle {
+        font-size: $font-size-md;
+        line-height: $font-size-md;
+    }
+
+    .mapBlockInfo {
+        > p {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+
+    .mapBlockContent {
+        font-size: 12px;
+    }
+
+    .mapBlockInfoDesc {
+        flex-direction: column;
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .scheduleBlock {
+        flex-direction: column;
+
+        > p {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+
+        > div {
+            height: 78px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            > p {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+    .links {
+        min-height: 80px;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .scheduleBlock {
+        height: auto;
+
+        > p {
+            margin-bottom: 15px;
+        }
+
+        > div {
+            height: 100%;
+
+            > p {
+                margin-bottom: 16px !important;
+            }
+
+            > :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+    .yandexMap {
+        height: 195px;
+    }
+
+    .mapBlockInfoDescIcon {
+        width: 16px !important;
+        margin-right: 8px !important;
+    }
+
+    .mapBlockInfoLine2 {
+        margin: 20px 0;
+        width: 100%;
+        max-width: 300px;
+    }
 }

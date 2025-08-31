@@ -38,6 +38,7 @@
     justify-content: flex-start;
 
     .formBlockTitle {
+        width: 590px;
         font-size: $font-size-xl;
         line-height: 1;
         text-transform: uppercase;
@@ -47,7 +48,7 @@
     }
 
     .formBlockSubtitle {
-        width: 396px;
+        width: 590px;   
         text-align: start;
     }
 }
