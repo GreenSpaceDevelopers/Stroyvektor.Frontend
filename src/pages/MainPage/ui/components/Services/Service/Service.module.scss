@@ -22,7 +22,7 @@
         transition: color 300ms linear;
 
         &.hovering {
-            color: $color-text-dark;
+            color: $color-black;
         }
     }
 
@@ -36,7 +36,7 @@
     }
 
     .serviceSubtitle {
-        color: $color-text-muted-light;
+        color: $color-white-muted-light;
         font-weight: bold;
         line-height: $font-size-base;
         margin-bottom: 10px;
@@ -53,7 +53,7 @@
         transition: color 300ms linear;
 
         &.hovering {
-            color: $color-text-dark;
+            color: $color-black;
         }
     }
 
@@ -78,13 +78,13 @@
             }
 
             &.second {
-                color: $color-text;
+                color: $color-white;
                 border: none;
                 background: rgba(0, 0, 0, 0.5);
             }
 
             &.hovering {
-                background: #000;
+                background: $color-black;
             }
         }
     }

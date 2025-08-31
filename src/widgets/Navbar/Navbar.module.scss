@@ -53,7 +53,7 @@
     align-content: center;
     text-transform: uppercase;
     color: #fff;
-    background-color: #000;
+    background-color: $color-black;
     border: none;
     cursor: pointer;
     line-height: $font-size-base;
@@ -155,7 +155,7 @@
         align-content: center;
         text-transform: uppercase;
         color: #fff;
-        background-color: #000;
+        background-color: $color-black;
         border: none;
         cursor: pointer;
         font-size: $font-size-sm;

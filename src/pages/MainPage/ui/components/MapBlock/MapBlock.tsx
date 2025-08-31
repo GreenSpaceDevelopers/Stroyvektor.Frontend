@@ -1,5 +1,4 @@
-import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
-import { PhoneIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import useScreenWidth from '@shared/hooks/useScreenWidth';
 
 import MapBlockLine1Url from '../../../assets/mapBlock/mapBlockLine1.svg';
