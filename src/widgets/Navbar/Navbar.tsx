@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
                                 className={styles.navbarContentPhoneNumber}
                                 href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
                             >
-                                {import.meta.env.VITE_COMPANY_PHONE}
+                                {import.meta.env.VITE_COMPANY_PHONE_NORMALIZE}
                             </a>
                         </div>
                     )}
