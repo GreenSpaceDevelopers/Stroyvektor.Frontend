@@ -19,6 +19,7 @@
     .footerUpper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         .footerUpperLogo {
             width: 84px;
@@ -30,6 +31,17 @@
 
             .footerUpperLink {
                 margin-right: 24px;
+                width: 44px;
+                height: 44px;
+                padding: 10px;
+                background-color: $color-white;
+                border-radius: 50%;
+                cursor: pointer;
+
+                .footerUpperIcon {
+                    width: 100%;
+                    color: $color-black;
+                }
             }
 
             .footerUpperLink:last-child {
@@ -46,20 +58,37 @@
             width: 100%;
             margin-bottom: 20px;
         }
-
-        .footerBottomDesc {
-        }
     }
 }
 
 @media (max-width: $breakpoint-laptop) {
+    .footer {
+        padding: 84px 147px 41px;
+    }
 }
 
 @media (max-width: $breakpoint-tablet-l) {
+    .footer {
+        padding: 84px 139px 41px;
+    }
 }
 
 @media (max-width: $breakpoint-tablet-s) {
+    .footer {
+        padding: 84px 113px 41px;
+    }
 }
 
 @media (max-width: $breakpoint-phone) {
+    .footer {
+        padding: 32px 10px 41px;
+    }
+
+    .footerUpperLinks {
+        .footerUpperLink {
+            width: 32px !important;
+            height: 32px !important;
+            padding: 5px !important;
+        }
+    }
 }

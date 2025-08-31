@@ -1,6 +1,6 @@
 .form {
     height: 713px;
-    background: #fff;
+    background: $color-white;
     padding: 24px;
     max-width: 628px;
 
@@ -88,7 +88,7 @@
             &.selected {
                 border-color: $color-black;
                 background: $color-black;
-                color: #fff;
+                color: $color-white;
             }
         }
 
@@ -127,7 +127,7 @@
             &.selected {
                 border-color: $color-black;
                 background: $color-black;
-                color: #fff;
+                color: $color-white;
             }
         }
     }
@@ -145,7 +145,7 @@
             margin-right: 24px;
             text-transform: uppercase;
             background: $color-black;
-            color: #fff;
+            color: $color-white;
             border: 1px solid $color-black;
             cursor: pointer;
         }

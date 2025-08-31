@@ -10,9 +10,8 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    background: $color-white-08;
+    @include backdrop-blur(50px);
 }
 
 .navbarContent {
@@ -52,7 +51,7 @@
     text-align: center;
     align-content: center;
     text-transform: uppercase;
-    color: #fff;
+    color: $color-white;
     background-color: $color-black;
     border: none;
     cursor: pointer;
@@ -116,9 +115,8 @@
         padding: 84px 24px;
         display: flex;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(50px);
-        -webkit-backdrop-filter: blur(50px);
+        background: $color-white-08;
+        @include backdrop-blur(50px);
         transition: right 300ms ease;
         z-index: 100;
 
@@ -154,7 +152,7 @@
         text-align: center;
         align-content: center;
         text-transform: uppercase;
-        color: #fff;
+        color: $color-white;
         background-color: $color-black;
         border: none;
         cursor: pointer;

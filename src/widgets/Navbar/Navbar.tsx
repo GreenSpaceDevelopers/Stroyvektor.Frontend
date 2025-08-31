@@ -46,8 +46,11 @@ export const Navbar: React.FC = () => {
                     {width > 575 && (
                         <div className={styles.navbarContentPhone}>
                             <PhoneIcon className={styles.navbarContentPhoneIcon} />
-                            <a className={styles.navbarContentPhoneNumber} href="tel:+79939761660">
-                                +7 (993) 976-16-60
+                            <a
+                                className={styles.navbarContentPhoneNumber}
+                                href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
+                            >
+                                {import.meta.env.VITE_COMPANY_PHONE}
                             </a>
                         </div>
                     )}
@@ -114,10 +117,10 @@ export const Navbar: React.FC = () => {
                             <PhoneIcon className={styles.navbarBurgerMenuContentPhoneIcon} />
                             <a
                                 className={styles.navbarBurgerMenuContentNumber}
-                                href="tel:+79939761660"
+                                href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
                                 onClick={() => setMenuVisible(false)}
                             >
-                                +7 (993) 976-16-60
+                                {import.meta.env.VITE_COMPANY_PHONE_NORMALIZE}
                             </a>
                         </div>
                     )}

@@ -3,8 +3,6 @@ import footerLineUrl from './assets/footerLine.svg';
 import styles from './Footer.module.scss';
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 
-import { tgIcon, whatsappIcon, vkIcon } from '@shared/assets/icons/socials';
-
 export const Footer: React.FC = () => {
     return (
         <footer className={styles.footer}>
@@ -14,22 +12,20 @@ export const Footer: React.FC = () => {
 
                     <div className={styles.footerUpperLinks}>
                         <a className={styles.footerUpperLink}>
-                            <EnvelopeIcon />
+                            <EnvelopeIcon className={styles.footerUpperIcon} />
                         </a>
                         <a className={styles.footerUpperLink}>
-                            <MapPinIcon />
+                            <MapPinIcon
+                                className={styles.footerUpperIcon}
+                                href="https://yandex.ru/maps/-/CLEVYEi9"
+                                target="_blank"
+                            />
                         </a>
-                        <a className={styles.footerUpperLink}>
-                            <PhoneIcon />
-                        </a>
-                        <a className={styles.footerUpperLink}>
-                            <img src={tgIcon} />
-                        </a>
-                        <a className={styles.footerUpperLink}>
-                            <img src={whatsappIcon} />
-                        </a>
-                        <a className={styles.footerUpperLink}>
-                            <img src={vkIcon} />
+                        <a
+                            className={styles.footerUpperLink}
+                            href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
+                        >
+                            <PhoneIcon className={styles.footerUpperIcon} />
                         </a>
                     </div>
                 </div>
