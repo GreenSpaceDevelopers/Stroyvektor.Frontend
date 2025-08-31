@@ -14,6 +14,7 @@
     padding: 160px 80px;
 
     display: flex;
+    justify-content: center;
 }
 
 .formBlock::before {
@@ -32,6 +33,7 @@
 
 .formBlockTitles {
     width: 50%;
+    max-width: 590px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -48,13 +50,14 @@
     }
 
     .formBlockSubtitle {
-        width: 590px;   
+        width: 590px;
         text-align: start;
     }
 }
 
 .formBlockForm {
     width: 50%;
+    max-width: 628px;
     text-align: center;
     padding: 0 29px;
 }

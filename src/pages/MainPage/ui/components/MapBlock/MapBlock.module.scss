@@ -26,6 +26,7 @@
             .links {
                 > p {
                     margin-bottom: 48px;
+                    margin-bottom: 186px;
                 }
 
                 > span {
@@ -41,21 +42,6 @@
 
                 > span:last-child {
                     margin-bottom: 48px;
-                }
-            }
-
-            .scheduleBlock {
-                display: flex;
-
-                > p {
-                    font-weight: bold;
-                    margin-right: 24px;
-                }
-
-                > div {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
                 }
             }
         }
@@ -96,8 +82,14 @@
 
     .yandexMap {
         width: 480px;
-        height: 300px;
+        height: 350px;
         margin-left: 24px;
+    }
+
+    .links {
+        > p {
+            margin-bottom: 161px !important;
+        }
     }
 }
 
@@ -130,27 +122,6 @@
     .mapBlockInfoDesc {
         display: flex;
         margin-bottom: 40px;
-    }
-
-    .scheduleBlock {
-        flex-direction: column;
-        height: 120px;
-
-        > p {
-            margin-bottom: 24px;
-            margin-right: 0 !important;
-        }
-
-        > div {
-            height: 78px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            > p {
-                margin-bottom: 0 !important;
-            }
-        }
     }
 
     .yandexMap {
@@ -204,25 +175,6 @@
         margin-bottom: 40px;
     }
 
-    .scheduleBlock {
-        flex-direction: column;
-        > p {
-            margin-bottom: 10px;
-            margin-right: 0;
-        }
-
-        > div {
-            height: 78px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            > p {
-                margin-bottom: 0 !important;
-            }
-        }
-    }
-
     .yandexMap {
         height: 225px;
     }
@@ -256,51 +208,11 @@
         margin-bottom: 30px;
     }
 
-    .scheduleBlock {
-        flex-direction: column;
-
-        > p {
-            margin-bottom: 10px;
-            margin-right: 0;
-        }
-
-        > div {
-            height: 78px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            > p {
-                margin-bottom: 0 !important;
-            }
-        }
-    }
-
     .links {
         min-height: 80px;
         margin: 0;
         width: 100%;
         margin-bottom: 24px;
-    }
-
-    .scheduleBlock {
-        height: auto;
-
-        > p {
-            margin-bottom: 15px;
-        }
-
-        > div {
-            height: 100%;
-
-            > p {
-                margin-bottom: 16px !important;
-            }
-
-            > :last-child {
-                margin-bottom: 0 !important;
-            }
-        }
     }
 
     .yandexMap {

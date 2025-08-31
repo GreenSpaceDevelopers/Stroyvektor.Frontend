@@ -11,6 +11,9 @@
     background-size: cover;
 
     margin-bottom: 160px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .header::before {
@@ -27,10 +30,16 @@
     z-index: 2;
 }
 
+.headerContent {
+    width: 100%;
+    max-width: 1272px;
+    height: 100%;
+}
+
 .headerUpper {
     position: absolute;
     top: 77px;
-    right: 84px;
+    right: 0;
 
     width: 636px;
 
@@ -46,7 +55,7 @@
 .headerBottom {
     position: absolute;
     bottom: 97px;
-    left: 84px;
+    left: 0;
 
     display: flex;
     flex-direction: column;

@@ -1,10 +1,10 @@
 import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
+import useScreenWidth from '@shared/hooks/useScreenWidth';
+
 import MapBlockLine1Url from '../../../assets/mapBlock/mapBlockLine1.svg';
 import MapBlockLine2Url from '../../../assets/mapBlock/mapBlockLine2.svg';
-
 import styles from './MapBlock.module.scss';
-import useScreenWidth from '@shared/hooks/useScreenWidth';
 
 export const MapBlock: React.FC = () => {
     const width = useScreenWidth();
@@ -61,16 +61,6 @@ export const MapBlock: React.FC = () => {
                                 <EnvelopeIcon className={styles.mapBlockInfoDescIcon} />
                                 <a>info@stroyvector.ru</a>
                             </span>
-                        </div>
-
-                        <div className={styles.scheduleBlock}>
-                            <p>График работы:</p>
-
-                            <div>
-                                <p>Пн–Пт: 10:00 – 20:00</p>
-                                <p>Сб: 11:00 – 17:00</p>
-                                <p>Вс: выходной</p>
-                            </div>
                         </div>
                     </div>
                 </div>
