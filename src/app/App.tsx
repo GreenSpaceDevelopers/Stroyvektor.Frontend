@@ -1,5 +1,5 @@
 import { Notifications } from '@mantine/notifications';
-import { Navbar } from '@widgets/index';
+import { Navbar, Footer } from '@widgets/index';
 
 import { AppRouter } from './routes/AppRouter';
 
@@ -7,11 +7,15 @@ import './App.css';
 
 const App = () => {
     return (
-        <div className="appContent">
+        <>
             <Navbar />
-            <AppRouter />
+            <div className="appContent">
+                <AppRouter />
+            </div>
+            <Footer />
+
             <Notifications position="bottom-right" />
-        </div>
+        </>
     );
 };
 

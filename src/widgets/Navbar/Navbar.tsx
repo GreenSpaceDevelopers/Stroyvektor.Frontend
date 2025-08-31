@@ -8,8 +8,8 @@ import mainLogo from '../../shared/assets/mainLogo.svg';
 import styles from './Navbar.module.scss';
 
 export const Navbar: React.FC = () => {
-    const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
     const width = useScreenWidth();
+    const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
 
     return (
         <>
@@ -73,17 +73,38 @@ export const Navbar: React.FC = () => {
                     />
 
                     <div className={styles.navbarBurgerMenuContentLinks}>
-                        <a className={styles.navbarBurgerMenuContentLink} href="#header">
+                        <a
+                            className={styles.navbarBurgerMenuContentLink}
+                            href="#header"
+                            onClick={() => setMenuVisible(false)}
+                        >
                             ГЛАВНАЯ
                         </a>
-                        <a className={styles.navbarBurgerMenuContentLink} href="#aboutUs">
+                        <a
+                            className={styles.navbarBurgerMenuContentLink}
+                            href="#aboutUs"
+                            onClick={() => setMenuVisible(false)}
+                        >
                             О НАС
                         </a>
-                        <a className={styles.navbarBurgerMenuContentLink} href="#services">
+                        <a
+                            className={styles.navbarBurgerMenuContentLink}
+                            href="#services"
+                            onClick={() => setMenuVisible(false)}
+                        >
                             УСЛУГИ
                         </a>
-                        <a className={styles.navbarBurgerMenuContentLink}>ПОРТФОЛИО</a>
-                        <a className={styles.navbarBurgerMenuContentLink} href="#mapBlock">
+                        <a
+                            className={styles.navbarBurgerMenuContentLink}
+                            onClick={() => setMenuVisible(false)}
+                        >
+                            ПОРТФОЛИО
+                        </a>
+                        <a
+                            className={styles.navbarBurgerMenuContentLink}
+                            href="#mapBlock"
+                            onClick={() => setMenuVisible(false)}
+                        >
                             КОНТАКТЫ
                         </a>
                     </div>
@@ -94,13 +115,18 @@ export const Navbar: React.FC = () => {
                             <a
                                 className={styles.navbarBurgerMenuContentNumber}
                                 href="tel:+79939761660"
+                                onClick={() => setMenuVisible(false)}
                             >
                                 +7 (993) 976-16-60
                             </a>
                         </div>
                     )}
 
-                    <a className={styles.navbarBurgerMenuContentButton} href="#formBlock">
+                    <a
+                        className={styles.navbarBurgerMenuContentButton}
+                        href="#formBlock"
+                        onClick={() => setMenuVisible(false)}
+                    >
                         Рассчитать стоимость
                     </a>
                 </div>
