@@ -4,6 +4,7 @@
     margin-inline: auto;
     min-height: 100vh;
     height: auto;
+    position: relative;
 }
 
 .appLoading {

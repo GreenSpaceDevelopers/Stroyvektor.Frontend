@@ -5,7 +5,8 @@
     letter-spacing: 0;
 
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 
     display: flex;
     flex-direction: column;

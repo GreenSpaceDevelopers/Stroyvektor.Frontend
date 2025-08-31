@@ -1,0 +1,222 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    padding: 12px 84px;
+    z-index: 99;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+.navbarContent {
+    width: 100%;
+    height: 100%;
+    max-width: 1272px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarContentLogoBlock {
+    height: 100%;
+
+    .navbarContentLogo {
+        height: 100%;
+    }
+}
+
+.navbarContentLinks {
+    .navbarContentLink {
+        margin-right: 48px;
+    }
+}
+
+.navbarContentPhone {
+    display: flex;
+    align-items: center;
+
+    .navbarContentPhoneIcon {
+        width: 24px;
+        margin-right: 5px;
+    }
+}
+
+.navbarContentButton {
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    line-height: $font-size-base;
+    padding: 14px 18px;
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .navbar {
+        padding: 10px 147px;
+    }
+
+    .navbarContentLinks {
+        .navbarContentLink {
+            font-size: $font-size-sm;
+            margin-right: 20px;
+        }
+    }
+
+    .navbarContentPhone {
+        .navbarContentPhoneIcon {
+            width: 20px;
+        }
+
+        .navbarContentPhoneNumber {
+            font-size: $font-size-sm;
+        }
+    }
+
+    .navbarContentButton {
+        font-size: $font-size-sm;
+        line-height: $font-size-sm;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .navbar {
+        padding: 10px 139px;
+    }
+
+    .burgerIcon {
+        width: 48px;
+    }
+
+    .navbarContentPhone {
+        .navbarContentPhoneIcon {
+            width: 24px;
+        }
+
+        .navbarContentPhoneNumber {
+            font-size: $font-size-base;
+        }
+    }
+
+    .navbarBurgerMenu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 265px;
+        height: 100vh;
+        padding: 84px 24px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        transition: right 300ms ease;
+        z-index: 100;
+
+        &.open {
+            right: 0;
+        }
+    }
+
+    .navbarBurgerMenuCloseIcon {
+        width: 48px;
+        position: absolute;
+        top: 8px;
+        right: 12px;
+    }
+
+    .navbarBurgerMenuContentLinks {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 64px;
+
+        .navbarBurgerMenuContentLink {
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 48px;
+        }
+
+        .navbarBurgerMenuContentLink:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .navbarBurgerMenuContentButton {
+        text-align: center;
+        align-content: center;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+        font-size: $font-size-sm;
+        line-height: $font-size-sm;
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+    .navbar {
+        padding: 10px 113px;
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .burgerIcon {
+        width: 24px;
+    }
+
+    .navbarBurgerMenu {
+        width: 273px;
+    }
+
+    .navbarBurgerMenuCloseIcon {
+        width: 28px;
+        top: 20px;
+        right: 10px;
+    }
+
+    .navbarBurgerMenuContentLinks {
+        .navbarBurgerMenuContentLink {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .navbarBurgerMenuContentButton {
+        width: 100%;
+        font-size: $font-size-sm;
+        line-height: $font-size-sm;
+        padding: 14px 18px;
+    }
+
+    .navbarBurgerMenuContentPhone {
+        margin-bottom: 64px;
+        display: flex;
+        align-items: center;
+
+        .navbarBurgerMenuContentPhoneIcon {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        .navbarBurgerMenuContentNumber {
+            font-size: $font-size-base;
+            line-height: $font-size-base;
+        }
+    }
+}

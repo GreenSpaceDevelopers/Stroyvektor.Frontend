@@ -3,7 +3,7 @@ import styles from './FormBlock.module.scss';
 
 export const FormBlock: React.FC = () => {
     return (
-        <div className={styles.formBlock}>
+        <div className={styles.formBlock} id="formBlock">
             <div className={styles.formBlockTitles}>
                 <h3 className={styles.formBlockTitle}>Заполнить анкету, чтобы получить КП</h3>
                 <p className={styles.formBlockSubtitle}>

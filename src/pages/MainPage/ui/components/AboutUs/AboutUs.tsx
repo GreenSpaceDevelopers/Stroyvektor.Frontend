@@ -12,7 +12,7 @@ export const AboutUs: React.FC = () => {
     const width = useScreenWidth();
 
     return (
-        <div className={styles.aboutUs}>
+        <div className={styles.aboutUs} id="aboutUs">
             <h3>Почему мы?</h3>
 
             <div className={styles.desc}>

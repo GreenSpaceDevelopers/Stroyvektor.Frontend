@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     const width = useScreenWidth();
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} id="header">
             <div className={styles.headerContent}>
                 <div className={styles.headerUpper}>
                     <img src={headerLine1Url} alt="" />

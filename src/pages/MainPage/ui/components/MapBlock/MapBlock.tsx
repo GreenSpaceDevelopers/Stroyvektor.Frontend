@@ -18,7 +18,11 @@ export const MapBlock: React.FC = () => {
     const src = `https://yandex.ru/map-widget/v1/?ll=${ll}&z=${zoom}&pt=${pt}&theme=dark`;
 
     return (
-        <div className={styles.mapBlock} style={{ borderRadius: 8, overflow: 'hidden' }}>
+        <div
+            className={styles.mapBlock}
+            style={{ borderRadius: 8, overflow: 'hidden' }}
+            id="mapBlock"
+        >
             <h3 className={styles.mapBlockTitle}>Всегда на связи</h3>
 
             {width <= 1023 && <img className={styles.mapBlockInfoLine2} src={MapBlockLine2Url} />}
@@ -53,9 +57,7 @@ export const MapBlock: React.FC = () => {
 
                             <span>
                                 <PhoneIcon className={styles.mapBlockInfoDescIcon} />
-                                <a href="+79939761660" type="tel">
-                                    +7 (999) 999-99-99
-                                </a>
+                                <a href="tel:+79939761660">+7 (993) 976-16-60</a>
                             </span>
                             <span>
                                 <EnvelopeIcon className={styles.mapBlockInfoDescIcon} />
