@@ -1,6 +1,6 @@
 .form {
     height: 713px;
-    background: #fff;
+    background: $color-white;
     padding: 24px;
     max-width: 628px;
 
@@ -14,7 +14,7 @@
         text-align: start;
         text-transform: uppercase;
         font-size: $font-size-md;
-        color: $color-text-dark;
+        color: $color-black;
     }
 
     .formHeaderImg {
@@ -46,7 +46,7 @@
     }
 
     .formInputLabel {
-        color: #000;
+        color: $color-black;
         font-size: 12px;
     }
 
@@ -64,7 +64,7 @@
     .formMessengersTitle {
         font-size: 20px;
         font-weight: 500;
-        color: #000;
+        color: $color-black;
         margin-bottom: 10px;
         text-align: start;
     }
@@ -86,9 +86,9 @@
             cursor: pointer;
 
             &.selected {
-                border-color: #000;
-                background: #000;
-                color: #fff;
+                border-color: $color-black;
+                background: $color-black;
+                color: $color-white;
             }
         }
 
@@ -105,7 +105,7 @@
     .formTimesTitle {
         font-size: 20px;
         font-weight: 500;
-        color: #000;
+        color: $color-black;
         margin-bottom: 10px;
         text-align: start;
     }
@@ -125,9 +125,9 @@
             cursor: pointer;
 
             &.selected {
-                border-color: #000;
-                background: #000;
-                color: #fff;
+                border-color: $color-black;
+                background: $color-black;
+                color: $color-white;
             }
         }
     }
@@ -144,9 +144,9 @@
             height: 39px;
             margin-right: 24px;
             text-transform: uppercase;
-            background: #000;
-            color: #fff;
-            border: 1px solid #000;
+            background: $color-black;
+            color: $color-white;
+            border: 1px solid $color-black;
             cursor: pointer;
         }
 
@@ -173,7 +173,7 @@
         .formTimesTitle {
             font-size: 20px;
             font-weight: 500;
-            color: #000;
+            color: $color-black;
             margin-bottom: 10px;
             text-align: start;
         }

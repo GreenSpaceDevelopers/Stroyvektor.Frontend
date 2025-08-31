@@ -1,0 +1,94 @@
+.footer {
+    width: 100%;
+    height: 348px;
+    background-color: $color-black;
+    padding: 84px 84px 41px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .footerContent {
+        height: 100%;
+        width: 100%;
+        max-width: 1272px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footerUpper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footerUpperLogo {
+            width: 84px;
+            height: 84px;
+        }
+
+        .footerUpperLinks {
+            display: flex;
+
+            .footerUpperLink {
+                margin-right: 24px;
+                width: 44px;
+                height: 44px;
+                padding: 10px;
+                background-color: $color-white;
+                border-radius: 50%;
+                cursor: pointer;
+
+                .footerUpperIcon {
+                    width: 100%;
+                    color: $color-black;
+                }
+            }
+
+            .footerUpperLink:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .footerBottom {
+        display: flex;
+        flex-direction: column;
+
+        .footerBottomLine {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .footer {
+        padding: 84px 147px 41px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .footer {
+        padding: 84px 139px 41px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+    .footer {
+        padding: 84px 113px 41px;
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .footer {
+        padding: 32px 10px 41px;
+    }
+
+    .footerUpperLinks {
+        .footerUpperLink {
+            width: 32px !important;
+            height: 32px !important;
+            padding: 5px !important;
+        }
+    }
+}

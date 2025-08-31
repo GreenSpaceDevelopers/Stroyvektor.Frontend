@@ -1,10 +1,10 @@
-import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
-import { PhoneIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import useScreenWidth from '@shared/hooks/useScreenWidth';
-
+import { notifications } from '@mantine/notifications';
 import MapBlockLine1Url from '../../../assets/mapBlock/mapBlockLine1.svg';
 import MapBlockLine2Url from '../../../assets/mapBlock/mapBlockLine2.svg';
 import styles from './MapBlock.module.scss';
+import { tryCopyTextAsync } from '@shared/utils';
 
 export const MapBlock: React.FC = () => {
     const width = useScreenWidth();
@@ -16,6 +16,15 @@ export const MapBlock: React.FC = () => {
     const ll = encodeURIComponent(`${lon},${lat}`);
     const pt = `${lon},${lat},pm2rdm`;
     const src = `https://yandex.ru/map-widget/v1/?ll=${ll}&z=${zoom}&pt=${pt}&theme=dark`;
+
+    const copyEmail = () => {
+        tryCopyTextAsync(import.meta.env.VITE_COMPANY_EMAIL);
+        notifications.show({
+            color: 'green',
+            title: 'Скопировано',
+            message: '',
+        });
+    };
 
     return (
         <div
@@ -51,17 +60,19 @@ export const MapBlock: React.FC = () => {
                             <span>
                                 <MapPinIcon className={styles.mapBlockInfoDescIcon} />
                                 <a href="https://yandex.ru/maps/-/CLEVYEi9" target="_blank">
-                                    Санкт-Петербург, ул. Примерная, 15
+                                    {import.meta.env.VITE_COMPANY_ADDRESS}
                                 </a>
                             </span>
 
                             <span>
                                 <PhoneIcon className={styles.mapBlockInfoDescIcon} />
-                                <a href="tel:+79939761660">+7 (993) 976-16-60</a>
+                                <a href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}>
+                                    {import.meta.env.VITE_COMPANY_PHONE_NORMALIZE}
+                                </a>
                             </span>
                             <span>
                                 <EnvelopeIcon className={styles.mapBlockInfoDescIcon} />
-                                <a>info@stroyvector.ru</a>
+                                <a onClick={copyEmail}>{import.meta.env.VITE_COMPANY_EMAIL}</a>
                             </span>
                         </div>
                     </div>

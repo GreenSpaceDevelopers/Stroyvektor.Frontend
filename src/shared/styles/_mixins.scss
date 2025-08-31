@@ -42,3 +42,8 @@
 @mixin responsive-font($min, $max) {
     font-size: clamp(#{$min}px, 2vw, #{$max}px);
 }
+
+@mixin backdrop-blur($radius: 50px) {
+    backdrop-filter: blur($radius);
+    -webkit-backdrop-filter: blur($radius);
+}

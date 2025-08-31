@@ -3,10 +3,13 @@
 // Accent colors
 $color-primary-dark: #1f1f1f;
 
-$color-text: #fff;
-$color-text-dark: #000;
-$color-text-muted: #8e8c8c;
-$color-text-muted-light: #878787;
+$color-white: #fff;
+$color-black: #000;
+$color-white-muted: #8e8c8c;
+$color-white-muted-light: #878787;
+
+$color-white-08: rgba(255, 255, 255, 0.08);
+$color-black-05: rgba(0, 0, 0, 0.5);
 
 // Fonts
 $font-oswald: 'Oswald', sans-serif;
@@ -29,5 +32,3 @@ $breakpoint-tablet-l: 1023px;
 $breakpoint-tablet-s: 767px;
 $breakpoint-phone: 575px;
 $breakpoint-phone-s: 320px;
-
-$bg-blur: 8%;

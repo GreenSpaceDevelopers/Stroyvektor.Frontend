@@ -23,7 +23,7 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: $color-black-05;
 }
 
 .formBlock > * {
@@ -74,13 +74,17 @@
             width: 396px;
         }
     }
+
+    .formBlock {
+        padding: 160px 147px;
+    }
 }
 
 @media (max-width: $breakpoint-tablet-l) {
     .formBlock {
         justify-content: center;
         height: 928px;
-        padding: 120px 140px;
+        padding: 110px 139px;
         display: flex;
         flex-direction: column;
     }
