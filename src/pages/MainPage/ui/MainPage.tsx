@@ -10,6 +10,12 @@ export const MainPage: React.FC = () => {
             <Gallery />
             <FormBlock />
             <MapBlock />
+            <div className={styles.mainPageOtz}>
+                <iframe
+                    className={styles.mainPageOtz}
+                    src="https://yandex.ru/maps-reviews-widget/189404084518?comments"
+                ></iframe>
+            </div>
         </div>
     );
 };
