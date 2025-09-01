@@ -11,7 +11,7 @@ import styles from './Services.module.scss';
 export const Services: React.FC = () => {
     const [hoveringService, setHoveringService] = useState<number | null>(1);
     const device = useDeviceType();
-    const isTouchDevice = device === 'mobile' || device === 'tablet';
+    const isTouchDevice = device === 'mobile';
 
     const refs = useRef<Array<HTMLDivElement | null>>([]);
     const setRefAt = (index: number) => (el: HTMLDivElement | null) => {

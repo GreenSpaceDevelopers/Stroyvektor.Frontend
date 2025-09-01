@@ -7,9 +7,9 @@ export type ServiceProps = {
     title: string;
     subtitle: string;
     description: string;
-    isHovering: boolean;
-    onMouseEnter: () => void;
-    onMouseLeave: () => void;
+    isHovering?: boolean;
+    onMouseEnter?: () => void;
+    onMouseLeave?: () => void;
     disableMouseHover?: boolean;
 };
 
