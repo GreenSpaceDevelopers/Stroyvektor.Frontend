@@ -1,7 +1,19 @@
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import { notifications } from '@mantine/notifications';
+import { tryCopyTextAsync } from '@shared/utils';
+
 import mainLogo from '../../shared/assets/mainLogo.svg';
 import footerLineUrl from './assets/footerLine.svg';
 import styles from './Footer.module.scss';
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
+
+const copyEmail = () => {
+    tryCopyTextAsync(import.meta.env.VITE_COMPANY_EMAIL);
+    notifications.show({
+        color: 'green',
+        title: 'Скопировано',
+        message: '',
+    });
+};
 
 export const Footer: React.FC = () => {
     return (
@@ -12,14 +24,14 @@ export const Footer: React.FC = () => {
 
                     <div className={styles.footerUpperLinks}>
                         <a className={styles.footerUpperLink}>
-                            <EnvelopeIcon className={styles.footerUpperIcon} />
+                            <EnvelopeIcon className={styles.footerUpperIcon} onClick={copyEmail} />
                         </a>
-                        <a className={styles.footerUpperLink}>
-                            <MapPinIcon
-                                className={styles.footerUpperIcon}
-                                href="https://yandex.ru/maps/-/CLEVYEi9"
-                                target="_blank"
-                            />
+                        <a
+                            className={styles.footerUpperLink}
+                            href="https://yandex.ru/maps/-/CLEVYEi9"
+                            target="_blank"
+                        >
+                            <MapPinIcon className={styles.footerUpperIcon} />
                         </a>
                         <a
                             className={styles.footerUpperLink}

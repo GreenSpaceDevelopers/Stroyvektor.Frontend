@@ -51,6 +51,7 @@ a:focus {
     margin: 0;
     text-decoration: none !important;
     color: inherit !important;
+    cursor: pointer;
 }
 
 h1,

@@ -1,10 +1,11 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
-import useScreenWidth from '@shared/hooks/useScreenWidth';
 import { notifications } from '@mantine/notifications';
+import { tryCopyTextAsync } from '@shared/utils';
+import useScreenWidth from '@shared/hooks/useScreenWidth';
+
 import MapBlockLine1Url from '../../../assets/mapBlock/mapBlockLine1.svg';
 import MapBlockLine2Url from '../../../assets/mapBlock/mapBlockLine2.svg';
 import styles from './MapBlock.module.scss';
-import { tryCopyTextAsync } from '@shared/utils';
 
 export const MapBlock: React.FC = () => {
     const width = useScreenWidth();
@@ -72,7 +73,9 @@ export const MapBlock: React.FC = () => {
                             </span>
                             <span>
                                 <EnvelopeIcon className={styles.mapBlockInfoDescIcon} />
-                                <a onClick={copyEmail}>{import.meta.env.VITE_COMPANY_EMAIL}</a>
+                                <a className={styles.linkEmail} onClick={copyEmail}>
+                                    {import.meta.env.VITE_COMPANY_EMAIL}
+                                </a>
                             </span>
                         </div>
                     </div>
