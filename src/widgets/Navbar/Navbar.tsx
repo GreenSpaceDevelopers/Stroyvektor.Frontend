@@ -101,6 +101,7 @@ export const Navbar: React.FC = () => {
                         </a>
                         <a
                             className={styles.navbarBurgerMenuContentLink}
+                            href="#gallery"
                             onClick={() => setMenuVisible(false)}
                         >
                             ПОРТФОЛИО

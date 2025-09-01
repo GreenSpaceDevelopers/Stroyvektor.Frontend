@@ -7,6 +7,8 @@ import * as object2 from '@pages/MainPage/assets/gallery/object2';
 import * as object3 from '@pages/MainPage/assets/gallery/object3';
 import * as object4 from '@pages/MainPage/assets/gallery/object4';
 
+import styles from './Gallery.module.scss';
+
 const object1Imgs = [
     object1.object1_1,
     object1.object1_2,
@@ -47,15 +49,7 @@ const object3Imgs = [
     object3.object3_14,
 ];
 
-const object4Imgs = [
-    object4.object4_1,
-    object4.object4_2,
-    object4.object4_3,
-    object4.object4_4,
-    object4.object4_5,
-];
-
-import styles from './Gallery.module.scss';
+const object4Imgs = [object4.object4_1, object4.object4_2, object4.object4_3, object4.object4_4];
 
 export const Gallery: React.FC = () => {
     return (
