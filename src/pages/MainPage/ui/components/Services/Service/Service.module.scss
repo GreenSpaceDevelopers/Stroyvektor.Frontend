@@ -71,6 +71,8 @@
         justify-content: space-between;
 
         .serviceButton {
+            align-content: center;
+            text-align: center;
             width: 49%;
             height: 39px;
             text-transform: uppercase;
@@ -80,7 +82,7 @@
             transition: background 300ms linear;
 
             &.first {
-                color: $color-black-05;
+                color: $color-black-05 !important;
                 background: transparent;
                 border: 1px solid $color-black-05;
             }

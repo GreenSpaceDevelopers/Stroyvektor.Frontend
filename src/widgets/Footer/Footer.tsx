@@ -1,6 +1,7 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { notifications } from '@mantine/notifications';
 import { tryCopyTextAsync } from '@shared/utils';
+import { tgIcon, whatsappIcon, vkIcon } from '@shared/assets/icons/socials';
 
 import mainLogo from '../../shared/assets/mainLogo.svg';
 import footerLineUrl from './assets/footerLine.svg';
@@ -23,9 +24,6 @@ export const Footer: React.FC = () => {
                     <img className={styles.footerUpperLogo} src={mainLogo} about="СтройВектор" />
 
                     <div className={styles.footerUpperLinks}>
-                        <a className={styles.footerUpperLink}>
-                            <EnvelopeIcon className={styles.footerUpperIcon} onClick={copyEmail} />
-                        </a>
                         <a
                             className={styles.footerUpperLink}
                             href="https://yandex.ru/maps/-/CLEVYEi9"
@@ -38,6 +36,25 @@ export const Footer: React.FC = () => {
                             href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
                         >
                             <PhoneIcon className={styles.footerUpperIcon} />
+                        </a>
+                        <a className={styles.footerUpperLink}>
+                            <EnvelopeIcon className={styles.footerUpperIcon} onClick={copyEmail} />
+                        </a>
+                        <a
+                            className={styles.footerUpperLink}
+                            href={import.meta.env.VITE_COMPANY_TG}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img className={styles.footerUpperIcon} src={tgIcon} alt="Telegram" />
+                        </a>
+                        <a
+                            className={styles.footerUpperLink}
+                            href={import.meta.env.VITE_COMPANY_VK}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img className={styles.footerUpperIcon} src={vkIcon} alt="Telegram" />
                         </a>
                     </div>
                 </div>

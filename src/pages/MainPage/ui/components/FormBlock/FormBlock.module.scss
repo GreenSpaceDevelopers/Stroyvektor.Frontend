@@ -11,10 +11,16 @@
     background-size: cover;
 
     margin-bottom: 160px;
-    padding: 160px 80px;
+    padding: 160px 84px;
 
     display: flex;
     justify-content: center;
+}
+
+.formBlockContent {
+    display: flex;
+    justify-content: space-between;
+    width: 1272px;
 }
 
 .formBlock::before {
@@ -59,7 +65,6 @@
     width: 50%;
     max-width: 628px;
     text-align: center;
-    padding: 0 29px;
 }
 
 @media (max-width: $breakpoint-laptop) {
@@ -85,8 +90,14 @@
         justify-content: center;
         height: 928px;
         padding: 110px 139px;
+    }
+
+    .formBlockContent {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 744px;
     }
 
     .formBlock::before {
@@ -120,6 +131,10 @@
         padding: 140px 113px;
     }
 
+    .formBlockContent {
+        width: 540px;
+    }
+
     .formBlock::before {
         height: 1063px;
     }
@@ -137,6 +152,10 @@
     .formBlock {
         height: 1106px;
         padding: 80px 10px;
+    }
+
+    .formBlockContent {
+        width: 100%;
     }
 
     .formBlock::before {

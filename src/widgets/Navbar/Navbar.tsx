@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
                         </a>
                     </div>
 
-                    {width > 1023 && (
+                    {width > 1100 && (
                         <div className={styles.navbarContentLinks}>
                             <a className={styles.navbarContentLink} href="#header">
                                 ГЛАВНАЯ
@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
                         </div>
                     )}
 
-                    {width > 1023 ? (
+                    {width > 1100 ? (
                         <a className={styles.navbarContentButton} href="#formBlock">
                             Рассчитать стоимость
                         </a>
@@ -70,7 +70,7 @@ export const Navbar: React.FC = () => {
                 </div>
             </nav>
 
-            {width <= 1023 && (
+            {width <= 1100 && (
                 <div className={clsx(styles.navbarBurgerMenu, { [styles.open]: isMenuVisible })}>
                     <XMarkIcon
                         className={styles.navbarBurgerMenuCloseIcon}

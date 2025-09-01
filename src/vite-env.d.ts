@@ -12,6 +12,8 @@ interface ImportMetaEnv {
     readonly VITE_COMPANY_PHONE_NORMALIZE: string;
     readonly VITE_COMPANY_EMAIL: string;
     readonly VITE_COMPANY_ADDRESS: string;
+    readonly VITE_COMPANY_TG: string;
+    readonly VITE_COMPANY_VK: string;
 }
 
 interface ImportMeta {

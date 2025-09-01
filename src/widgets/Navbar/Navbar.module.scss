@@ -59,6 +59,65 @@
     padding: 14px 18px;
 }
 
+.navbarBurgerMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: auto;
+    height: 100vh;
+    padding: 84px 24px;
+    display: flex;
+    flex-direction: column;
+    background: $color-white-08;
+    @include backdrop-blur(50px);
+    transition: right 300ms ease;
+    z-index: 100;
+
+    &.open {
+        right: 0;
+    }
+}
+
+.navbarBurgerMenuCloseIcon {
+    width: 48px;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+
+.navbarBurgerMenuContentLinks {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+
+    .navbarBurgerMenuContentLink {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 48px;
+    }
+
+    .navbarBurgerMenuContentLink:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.navbarBurgerMenuContentButton {
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-black;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    line-height: $font-size-sm;
+    padding: 14px 18px;
+}
+
+.burgerIcon {
+    width: 48px;
+}
+
 @media (max-width: $breakpoint-laptop) {
     .navbar {
         padding: 10px 147px;
@@ -92,10 +151,6 @@
         padding: 10px 139px;
     }
 
-    .burgerIcon {
-        width: 48px;
-    }
-
     .navbarContentPhone {
         .navbarContentPhoneIcon {
             width: 24px;
@@ -104,61 +159,6 @@
         .navbarContentPhoneNumber {
             font-size: $font-size-base;
         }
-    }
-
-    .navbarBurgerMenu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: auto;
-        height: 100vh;
-        padding: 84px 24px;
-        display: flex;
-        flex-direction: column;
-        background: $color-white-08;
-        @include backdrop-blur(50px);
-        transition: right 300ms ease;
-        z-index: 100;
-
-        &.open {
-            right: 0;
-        }
-    }
-
-    .navbarBurgerMenuCloseIcon {
-        width: 48px;
-        position: absolute;
-        top: 8px;
-        right: 12px;
-    }
-
-    .navbarBurgerMenuContentLinks {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 64px;
-
-        .navbarBurgerMenuContentLink {
-            font-size: 20px;
-            line-height: 20px;
-            margin-bottom: 48px;
-        }
-
-        .navbarBurgerMenuContentLink:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .navbarBurgerMenuContentButton {
-        text-align: center;
-        align-content: center;
-        text-transform: uppercase;
-        color: $color-white;
-        background-color: $color-black;
-        border: none;
-        cursor: pointer;
-        font-size: $font-size-sm;
-        line-height: $font-size-sm;
-        padding: 14px 18px;
     }
 }
 
