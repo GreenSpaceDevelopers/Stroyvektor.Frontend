@@ -36,7 +36,9 @@ export const Navbar: React.FC = () => {
                             <a className={styles.navbarContentLink} href="#services">
                                 УСЛУГИ
                             </a>
-                            <a className={styles.navbarContentLink}>ПОРТФОЛИО</a>
+                            <a className={styles.navbarContentLink} href="#gallery">
+                                ПОРТФОЛИО
+                            </a>
                             <a className={styles.navbarContentLink} href="#mapBlock">
                                 КОНТАКТЫ
                             </a>

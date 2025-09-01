@@ -1,3 +1,4 @@
+export { Gallery } from './Gallery/Gallery';
 export { MapBlock } from './MapBlock/MapBlock';
 export { FormBlock } from './FormBlock/FormBlock';
 export { Services } from './Services/Services';

@@ -1,0 +1,208 @@
+.gallery {
+    width: 100%;
+    height: 1301px;
+    margin-bottom: 160px;
+}
+
+.galleryTitle {
+    text-transform: uppercase;
+    font-size: $font-size-xl;
+    margin-bottom: 48px;
+    font-weight: normal;
+}
+
+.galleryCarousels {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.galleryCarouselItem {
+    width: 513px;
+    height: 526px;
+
+    &.big {
+        width: 732px;
+    }
+}
+
+.galleryCarouselItemBottom {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.galleryCarouselItemBottomTitles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.galleryCarouselItemBottomLine {
+    margin: 12px 0;
+    width: 100%;
+}
+
+.galleryCarouselItemBottomSubtitle {
+    color: $color-white-muted;
+}
+
+.galleryCarouselItemUpper {
+    width: 100%;
+    height: 430px;
+}
+
+.galleryCarouselItemUpperSlide {
+    height: 100%;
+}
+
+.galleryCarouselItemUpperSlideBox {
+    height: 100%;
+}
+
+.galleryCarouselItemUpperSlideImage {
+    height: 100%;
+}
+
+.carouselControl {
+    width: 36px;
+    height: 36px;
+    background: $color-black-05;
+    @include backdrop-blur;
+    border: none;
+    color: $color-white;
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .gallery {
+        height: 1088px;
+    }
+
+    .galleryTitle {
+        font-size: $font-size-lg;
+    }
+
+    .galleryCarouselItem {
+        width: 396px;
+        height: 422px;
+
+        &.big {
+            width: 564px;
+        }
+    }
+
+    .galleryCarouselItemUpper {
+        width: 100%;
+        height: 320px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .gallery {
+        height: 973px;
+        margin-bottom: 140px;
+    }
+
+    .galleryTitle {
+        font-size: 40px;
+    }
+
+    .galleryCarouselItem {
+        width: 264px;
+        height: 373px;
+
+        &.big {
+            width: 456px;
+        }
+    }
+
+    .galleryCarouselItemUpper {
+        height: 260px;
+    }
+
+    .galleryCarouselItemBottom {
+        font-size: $font-size-sm;
+    }
+
+    .galleryCarouselItemBottomLine {
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    .carouselControl {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet-s) {
+    .gallery {
+        height: auto;
+        margin-bottom: 120px;
+    }
+
+    .galleryTitle {
+        font-size: 40px;
+    }
+
+    .galleryCarouselItem {
+        width: 196px;
+        height: auto;
+
+        &.big {
+            width: 320px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .galleryTitle {
+        font-size: $font-size-md;
+        margin-bottom: $font-size-md;
+    }
+
+    .gallery {
+        height: auto;
+        margin-bottom: 120px;
+    }
+
+    .galleryTitle {
+        font-size: 40px;
+    }
+
+    .galleryCarouselItem {
+        width: 100%;
+        height: auto;
+
+        &.big {
+            width: 100%;
+        }
+    }
+
+    .galleryCarouselItemBottom {
+        font-size: 12px;
+    }
+
+    .galleryCarouselItemBottomLine {
+        margin: 8px 0;
+    }
+
+    .galleryCarouselItemBottom {
+        margin-top: 16px;
+    }
+
+    .modalCarouselControl {
+        width: 30px;
+        height: 30px;
+    }
+
+    .galleryModalChevronWrapper,
+    .galleryModalChevronWrapper:active,
+    .galleryModalChevronWrapper:hover {
+        position: absolute;
+        color: $color-white;
+        top: 30px;
+        right: 30px;
+        z-index: 5;
+    }
+}
