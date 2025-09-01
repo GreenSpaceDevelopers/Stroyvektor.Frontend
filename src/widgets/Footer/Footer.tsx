@@ -1,7 +1,7 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { notifications } from '@mantine/notifications';
 import { tryCopyTextAsync } from '@shared/utils';
-import { tgIcon, whatsappIcon, vkIcon } from '@shared/assets/icons/socials';
+import { tgIcon, vkIcon } from '@shared/assets/icons/socials';
 
 import mainLogo from '../../shared/assets/mainLogo.svg';
 import footerLineUrl from './assets/footerLine.svg';
