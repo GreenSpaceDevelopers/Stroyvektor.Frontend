@@ -6,6 +6,8 @@ import { tgIcon, vkIcon } from '@shared/assets/icons/socials';
 import mainLogo from '../../shared/assets/mainLogo.svg';
 import footerLineUrl from './assets/footerLine.svg';
 import styles from './Footer.module.scss';
+import clsx from 'clsx';
+import { useLocation } from 'react-router-dom';
 
 const copyEmail = () => {
     tryCopyTextAsync(import.meta.env.VITE_COMPANY_EMAIL);
@@ -17,6 +19,8 @@ const copyEmail = () => {
 };
 
 export const Footer: React.FC = () => {
+    const { pathname } = useLocation();
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
@@ -56,6 +60,38 @@ export const Footer: React.FC = () => {
                         >
                             <img className={styles.footerUpperIcon} src={vkIcon} alt="Telegram" />
                         </a>
+                    </div>
+                </div>
+
+                <div className={styles.footerCenter}>
+                    <div className={clsx(styles.footerCenterBlock, styles.one)}>
+                        <a href={pathname === '/' ? '#header' : '/'}>Главная</a>
+                        <a href="#aboutUs">О нас</a>
+                        <a href="#services">Услуги</a>
+                        <a href="#gallery">Портфолио</a>
+                        <a href="#mapBlock">Контакты</a>
+                        <a href="/privacyPolicy">Политика конфиденциальности</a>
+                    </div>
+
+                    <div className={styles.footerCenterBlockCompanyInfo}>
+                        <div className={clsx(styles.footerCenterBlock, styles.two)}>
+                            <p>Юридический адрес:</p>
+                            <p>
+                                197375, Россия, г Санкт-Петербург, ул Вербная, дом 4, корпус литера
+                                А, оф. №59 пом. 2-Н
+                            </p>
+                        </div>
+
+                        <div className={clsx(styles.footerCenterBlock, styles.three)}>
+                            <p>Р/с № 40702810 2200 0020 6340</p>
+                            <p>ИНН 7814851677</p>
+                            <p>КПП 781401001</p>
+                            <p>+7 (993) 976-16-60</p>
+                            <p className={styles.footerCenterBlockStyles}>
+                                {import.meta.env.VITE_COMPANY_EMAIL}
+                            </p>
+                            <p className={styles.footerCenterBlockStyles}>стройвектор78.рф</p>
+                        </div>
                     </div>
                 </div>
 

@@ -213,7 +213,10 @@ export const Form: React.FC = () => {
 
                     <p className={styles.formButtonDesk}>
                         Нажимая кнопку «Отправить», Вы даёте согласие на обработку персональных
-                        данных и соглашаетесь с Политикой конфиденциальности
+                        данных и соглашаетесь с{' '}
+                        <a className={styles.formButtonDeskPrivacyPolicy} href="/privacyPolicy">
+                            Политикой конфиденциальности
+                        </a>
                     </p>
                 </div>
             </div>

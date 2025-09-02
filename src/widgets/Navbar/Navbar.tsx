@@ -6,8 +6,10 @@ import useScreenWidth from '@shared/hooks/useScreenWidth';
 
 import mainLogo from '../../shared/assets/mainLogo.svg';
 import styles from './Navbar.module.scss';
+import { useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
+    const { pathname } = useLocation();
     const width = useScreenWidth();
     const [isMenuVisible, setMenuVisible] = useState<boolean>(false);
 
@@ -16,7 +18,7 @@ export const Navbar: React.FC = () => {
             <nav className={styles.navbar}>
                 <div className={styles.navbarContent}>
                     <div className={styles.navbarContentLogoBlock}>
-                        <a href="#header">
+                        <a href={pathname === '/' ? '#header' : '/'}>
                             <img
                                 className={styles.navbarContentLogo}
                                 src={mainLogo}
@@ -27,7 +29,10 @@ export const Navbar: React.FC = () => {
 
                     {width > 1100 && (
                         <div className={styles.navbarContentLinks}>
-                            <a className={styles.navbarContentLink} href="#header">
+                            <a
+                                className={styles.navbarContentLink}
+                                href={pathname === '/' ? '#header' : '/'}
+                            >
                                 ГЛАВНАЯ
                             </a>
                             <a className={styles.navbarContentLink} href="#aboutUs">

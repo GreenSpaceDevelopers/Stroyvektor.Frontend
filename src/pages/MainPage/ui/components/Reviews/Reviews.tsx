@@ -1,11 +1,12 @@
 import styles from './Reviews.module.scss';
 import { useEffect, useState } from 'react';
 import { Rating } from '@mantine/core';
-import { getYandexRatingByOrgId, IYMapRating } from '@shared/api/yandex';
+import { getYandexRatingByOrgId } from '@shared/api/yandex';
 import { useYMaps } from '@shared/hooks/useYMaps';
 
 import yandexIcon from '../../../assets/reviews/yandexIcon.svg';
 import yandexMapIcon from '../../../assets/reviews/yandexMapIcon.svg';
+import { IYMapRating } from '@entities/yandex/models/IYMapRating';
 
 export const Reviews: React.FC = () => {
     const { ready, error } = useYMaps();
@@ -13,6 +14,7 @@ export const Reviews: React.FC = () => {
 
     useEffect(() => {
         if (!ready) return;
+
         getYandexRatingByOrgId()
             .then(setRating)
             .catch(() => setRating(null));

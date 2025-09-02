@@ -1,6 +1,5 @@
 .footer {
     width: 100%;
-    height: 348px;
     background-color: $color-black;
     padding: 84px 84px 41px;
     display: flex;
@@ -20,6 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 48px;
 
         .footerUpperLogo {
             width: 84px;
@@ -45,13 +45,63 @@
         }
     }
 
+    .footerCenter {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 84px;
+    }
+
+    .footerCenterBlock {
+        display: flex;
+        flex-direction: column;
+
+        &.one {
+            > a {
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-bottom: 24px;
+            }
+
+            > a:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.two {
+            margin-right: 40px;
+
+            > p {
+                width: 244px;
+            }
+        }
+
+        &.three {
+            > p {
+                margin-bottom: 18px;
+            }
+
+            > p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footerCenterBlockStyles {
+        text-decoration: underline;
+    }
+
+    .footerCenterBlockCompanyInfo {
+        display: flex;
+    }
+
     .footerBottom {
         display: flex;
         flex-direction: column;
 
         .footerBottomLine {
             width: 100%;
-            margin-bottom: 20px;
+            margin: 0 0 20px;
         }
     }
 }
@@ -65,12 +115,39 @@
 @media (max-width: $breakpoint-tablet-l) {
     .footer {
         padding: 84px 139px 41px;
+        font-size: $font-size-sm;
     }
 }
 
 @media (max-width: $breakpoint-tablet-s) {
     .footer {
         padding: 84px 113px 41px;
+    }
+
+    .footerCenterBlockCompanyInfo {
+        flex-direction: column;
+    }
+
+    .footerCenterBlockCompanyInfo {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .footerCenterBlock {
+        width: 258px;
+
+        &.one {
+            margin-bottom: 48px;
+        }
+
+        &.two {
+            margin-bottom: 48px;
+            margin-right: 0 !important;
+
+            > p {
+                width: 100% !important;
+            }
+        }
     }
 }
 
@@ -79,11 +156,41 @@
         padding: 32px 10px 41px;
     }
 
+    .footerUpper {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin-bottom: 32px !important;
+    }
+
+    .footerCenter {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .footerUpperLogo {
+        margin-bottom: 32px;
+    }
+
     .footerUpperLinks {
         .footerUpperLink {
             width: 32px !important;
             height: 32px !important;
             padding: 5px !important;
+            margin-right: 16px;
+        }
+
+        .footerUpperLink:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .footerCenterBlock {
+        &.one {
+            margin-bottom: 32px;
+        }
+
+        &.two {
+            margin-bottom: 32px;
         }
     }
 }

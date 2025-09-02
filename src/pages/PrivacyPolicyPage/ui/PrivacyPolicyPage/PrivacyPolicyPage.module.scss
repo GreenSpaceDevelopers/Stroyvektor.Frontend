@@ -1,0 +1,18 @@
+.privacyPolicyPage {
+    margin-top: 141px;
+    margin-bottom: 160px;
+}
+
+@media (max-width: $breakpoint-tablet-l) {
+    .privacyPolicyPage {
+        font-size: 14px;
+        margin-top: 96px;
+        margin-bottom: 140px;
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .privacyPolicyPage {
+        margin-bottom: 120px;
+    }
+}
