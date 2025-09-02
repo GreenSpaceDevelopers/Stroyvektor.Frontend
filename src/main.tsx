@@ -40,11 +40,10 @@ dayjs.updateLocale('ru', {
     ],
 });
 
-const basename = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-    <BrowserRouter basename={basename}>
+    <BrowserRouter>
         <MantineProvider>
             <App />
         </MantineProvider>
