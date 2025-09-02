@@ -1,5 +1,4 @@
 import object2_1 from './object2_1.png';
-import object2_10 from './object2_10.png';
 import object2_2 from './object2_2.png';
 import object2_3 from './object2_3.png';
 import object2_4 from './object2_4.png';
@@ -19,5 +18,4 @@ export {
     object2_7,
     object2_8,
     object2_9,
-    object2_10,
 };

@@ -1,6 +1,6 @@
 .service {
     width: 624px;
-    height: 267px;
+    height: 284px;
     padding: 24px;
     letter-spacing: 0;
 
@@ -15,8 +15,8 @@
 
     .serviceTitle {
         text-transform: uppercase;
-        font-size: $font-size-md;
-        line-height: $font-size-md;
+        font-size: 36px;
+        line-height: 36px;
 
         transition: color 300ms linear;
 
@@ -69,6 +69,17 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        .servicePrice {
+            color: $color-black-05;
+            font-size: 20px;
+            font-weight: bold;
+
+            &.hovering {
+                color: $color-black;
+            }
+        }
 
         .serviceButton {
             align-content: center;
@@ -81,20 +92,14 @@
             font-weight: bold;
             transition: background 300ms linear;
 
-            &.first {
-                color: $color-black-05 !important;
-                background: transparent;
-                border: 1px solid $color-black-05;
-            }
-
             &.second {
                 color: $color-white;
                 border: none;
                 background: $color-black-05;
-            }
 
-            &.hovering {
-                background: $color-black;
+                &.hovering {
+                    background: $color-black;
+                }
             }
         }
     }
@@ -110,11 +115,11 @@
 @media (max-width: $breakpoint-tablet-l) {
     .service {
         width: 360px;
-        height: 293px;
+        height: 330px;
 
         .serviceTitle {
-            font-size: 24px;
-            line-height: 24px;
+            font-size: 30px;
+            line-height: 30px;
         }
 
         .serviceSubtitle {
@@ -127,6 +132,10 @@
         }
 
         .serviceButtons {
+            .servicePrice {
+                font-size: 16px;
+            }
+
             .serviceButton {
                 font-size: $font-size-sm;
             }
@@ -138,6 +147,10 @@
     .service {
         width: 540px;
         height: 251px;
+
+        .serviceTitle {
+            font-size: 21px;
+        }
 
         .serviceButtons {
             .serviceButton {

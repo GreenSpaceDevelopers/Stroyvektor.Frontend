@@ -1,6 +1,7 @@
+export { Header } from './Header/Header';
+export { Reviews } from './Reviews/Reviews';
 export { Gallery } from './Gallery/Gallery';
-export { MapBlock } from './MapBlock/MapBlock';
-export { FormBlock } from './FormBlock/FormBlock';
-export { Services } from './Services/Services';
 export { AboutUs } from './AboutUs/AboutUs';
-export { Header } from '@pages/MainPage/ui/components/Header/Header';
+export { MapBlock } from './MapBlock/MapBlock';
+export { Services } from './Services/Services';
+export { FormBlock } from './FormBlock/FormBlock';

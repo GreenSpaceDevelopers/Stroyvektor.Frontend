@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
 
                     {width > 1100 ? (
                         <a className={styles.navbarContentButton} href="#formBlock">
-                            Рассчитать стоимость
+                            Оставить заявку
                         </a>
                     ) : (
                         <Bars3Icon
@@ -133,7 +133,7 @@ export const Navbar: React.FC = () => {
                         href="#formBlock"
                         onClick={() => setMenuVisible(false)}
                     >
-                        Рассчитать стоимость
+                        Оставить заявку
                     </a>
                 </div>
             )}

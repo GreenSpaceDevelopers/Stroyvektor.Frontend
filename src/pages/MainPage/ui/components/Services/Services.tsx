@@ -54,6 +54,7 @@ export const Services: React.FC = () => {
                     title={blockContent1.title}
                     subtitle={blockContent1.subtitle}
                     description={blockContent1.description}
+                    price={blockContent1.price}
                     isHovering={hoveringService === 1}
                     onMouseEnter={() => setHoveringService(1)}
                     onMouseLeave={() => setHoveringService(null)}
@@ -64,6 +65,7 @@ export const Services: React.FC = () => {
                     title={blockContent2.title}
                     subtitle={blockContent2.subtitle}
                     description={blockContent2.description}
+                    price={blockContent2.price}
                     isHovering={hoveringService === 2}
                     onMouseEnter={() => setHoveringService(2)}
                     onMouseLeave={() => setHoveringService(null)}
@@ -74,6 +76,7 @@ export const Services: React.FC = () => {
                     title={blockContent3.title}
                     subtitle={blockContent3.subtitle}
                     description={blockContent3.description}
+                    price={blockContent3.price}
                     isHovering={hoveringService === 3}
                     onMouseEnter={() => setHoveringService(3)}
                     onMouseLeave={() => setHoveringService(null)}
@@ -84,6 +87,7 @@ export const Services: React.FC = () => {
                     title={blockContent4.title}
                     subtitle={blockContent4.subtitle}
                     description={blockContent4.description}
+                    price={blockContent4.price}
                     isHovering={hoveringService === 4}
                     onMouseEnter={() => setHoveringService(4)}
                     onMouseLeave={() => setHoveringService(null)}
@@ -112,7 +116,7 @@ export const Services: React.FC = () => {
                 <div className={styles.servicesAdditionalRaw}>
                     <span className={styles.servicesAdditionalRawHeader}>
                         <p className={styles.servicesAdditionalRawTitle}>технический проект</p>
-                        <p className={styles.servicesAdditionalRawTitle}>600 ₽ / м2</p>
+                        <p className={styles.servicesAdditionalRawTitle}>600 ₽ / м²</p>
                     </span>
                     <img
                         className={styles.servicesAdditionalRawImg}
@@ -127,7 +131,7 @@ export const Services: React.FC = () => {
                 <div className={styles.servicesAdditionalRaw}>
                     <span className={styles.servicesAdditionalRawHeader}>
                         <p className={styles.servicesAdditionalRawTitle}>Дизайн-проект</p>
-                        <p className={styles.servicesAdditionalRawTitle}>2 000 ₽ / м2</p>
+                        <p className={styles.servicesAdditionalRawTitle}>2 000 ₽ / м²</p>
                     </span>
                     <img
                         className={styles.servicesAdditionalRawImg}
@@ -142,7 +146,7 @@ export const Services: React.FC = () => {
                 <div className={styles.servicesAdditionalRaw}>
                     <span className={styles.servicesAdditionalRawHeader}>
                         <p className={styles.servicesAdditionalRawTitle}>home staging</p>
-                        <p className={styles.servicesAdditionalRawTitle}>1 000 ₽ / м2</p>
+                        <p className={styles.servicesAdditionalRawTitle}>1 000 ₽ / м²</p>
                     </span>
                     <img
                         className={styles.servicesAdditionalRawImg}
@@ -157,7 +161,7 @@ export const Services: React.FC = () => {
                 <div className={styles.servicesAdditionalRaw}>
                     <span className={styles.servicesAdditionalRawHeader}>
                         <p className={styles.servicesAdditionalRawTitle}>Клининг</p>
-                        <p className={styles.servicesAdditionalRawTitle}>500 ₽ / м2</p>
+                        <p className={styles.servicesAdditionalRawTitle}>500 ₽ / м²</p>
                     </span>
                     <img
                         className={styles.servicesAdditionalRawImg}

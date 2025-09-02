@@ -4,7 +4,6 @@
     left: 0;
     right: 0;
     height: 64px;
-    padding: 12px 84px;
     z-index: 99;
     width: 100%;
     margin: 0 auto;
@@ -12,10 +11,12 @@
     justify-content: center;
     background: $color-white-08;
     @include backdrop-blur(50px);
+    padding: 10px 0;
 }
 
 .navbarContent {
     width: 100%;
+    max-width: 1272px;
     height: 100%;
     max-width: 1272px;
     display: flex;
@@ -119,8 +120,8 @@
 }
 
 @media (max-width: $breakpoint-laptop) {
-    .navbar {
-        padding: 10px 147px;
+    .navbarContent {
+        max-width: 984px;
     }
 
     .navbarContentLinks {
@@ -147,8 +148,8 @@
 }
 
 @media (max-width: $breakpoint-tablet-l) {
-    .navbar {
-        padding: 10px 139px;
+    .navbarContent {
+        max-width: 744px;
     }
 
     .navbarContentPhone {
@@ -163,18 +164,23 @@
 }
 
 @media (max-width: $breakpoint-tablet-s) {
-    .navbar {
-        padding: 10px 113px;
+    .navbarContent {
+        max-width: 540px;
     }
 }
 
 @media (max-width: $breakpoint-phone) {
-    .navbar {
-        padding: 10px 10px;
-    }
-
     .burgerIcon {
         width: 24px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbarContent {
+        width: 100%;
+        max-width: none;
     }
 
     .navbarBurgerMenu {

@@ -89,7 +89,7 @@
     .formBlock {
         justify-content: center;
         height: 928px;
-        padding: 110px 139px;
+        padding: 140px 139px;
     }
 
     .formBlockContent {
@@ -150,8 +150,8 @@
 
 @media (max-width: $breakpoint-phone) {
     .formBlock {
-        height: 1106px;
-        padding: 80px 10px;
+        height: auto;
+        padding: 120px 10px;
     }
 
     .formBlockContent {
@@ -159,7 +159,7 @@
     }
 
     .formBlock::before {
-        height: 1106px;
+        height: auto;
     }
 
     .formBlockTitles {

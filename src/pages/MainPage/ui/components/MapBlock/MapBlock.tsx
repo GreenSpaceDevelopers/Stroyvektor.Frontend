@@ -11,7 +11,7 @@ import styles from './MapBlock.module.scss';
 export const MapBlock: React.FC = () => {
     const width = useScreenWidth();
 
-    const src = `https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=30.276234%2C60.024460&mode=search&oid=189404084518&ol=biz&sll=30.276234%2C60.024460&sspn=0.015020%2C0.004430&text=%D0%A1%D1%82%D1%80%D0%BE%D0%B9%D0%92%D0%B5%D0%BA%D1%82%D0%BE%D1%80&utm_source=share&z=17&theme=dark`;
+    const src = `https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=30.276234%2C60.024460&mode=search&oid=${import.meta.env.VITE_YMAPS_ORG_ID}&ol=biz&sll=30.276234%2C60.024460&sspn=0.015020%2C0.004430&text=%D0%A1%D1%82%D1%80%D0%BE%D0%B9%D0%92%D0%B5%D0%BA%D1%82%D0%BE%D1%80&utm_source=share&z=17&theme=dark`;
     const copyEmail = () => {
         tryCopyTextAsync(import.meta.env.VITE_COMPANY_EMAIL);
         notifications.show({
@@ -54,7 +54,11 @@ export const MapBlock: React.FC = () => {
 
                             <span>
                                 <MapPinIcon className={styles.mapBlockInfoDescIcon} />
-                                <a href="https://yandex.ru/maps/-/CLEVYEi9" target="_blank">
+                                <a
+                                    href="https://yandex.ru/maps/-/CLEVYEi9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     {import.meta.env.VITE_COMPANY_ADDRESS}
                                 </a>
                             </span>

@@ -8,6 +8,7 @@ export type ServiceProps = {
     subtitle: string;
     description: string;
     isHovering?: boolean;
+    price?: string;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
     disableMouseHover?: boolean;
@@ -51,14 +52,22 @@ export const Service = forwardRef<HTMLDivElement, ServiceProps>((props, ref) => 
             </div>
 
             <div className={styles.serviceButtons}>
-                <button className={clsx(styles.serviceButton, styles.first)}>подробнее</button>
-                <button
-                    className={clsx(styles.serviceButton, styles.second, {
+                <p
+                    className={clsx(styles.servicePrice, {
                         [styles.hovering]: props.isHovering,
                     })}
                 >
-                    заполнить бриф
-                </button>
+                    {props.price}
+                </p>
+
+                <a
+                    className={clsx(styles.serviceButton, styles.second, {
+                        [styles.hovering]: props.isHovering,
+                    })}
+                    href="#formBlock"
+                >
+                    оставить заявку
+                </a>
             </div>
         </div>
     );

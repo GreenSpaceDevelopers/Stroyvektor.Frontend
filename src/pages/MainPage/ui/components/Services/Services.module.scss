@@ -4,6 +4,7 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+    padding: 160px 0;
 
     background-image: url(../../../assets/services/servicesBg.png);
     background-repeat: no-repeat;
@@ -11,11 +12,11 @@
     background-size: cover;
 
     margin-bottom: 160px;
-    padding: 160px 84px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .services::before {
@@ -106,7 +107,6 @@
 
     .services {
         height: 1700px;
-        padding: 160px 144px;
 
         .servicesTitle {
             font-size: $font-size-lg;
@@ -127,12 +127,13 @@
 @media (max-width: $breakpoint-tablet-l) {
     .servicesBlocks {
         width: 744px;
-        height: 633px;
+        height: auto;
+        row-gap: 48px;
     }
 
     .services {
         height: 1576px;
-        padding: 140px 139px;
+        padding: 140px 0;
 
         .servicesTitle {
             font-size: 48px;
@@ -172,7 +173,6 @@
 
     .services {
         height: 2011px;
-        padding: 140px 113px;
 
         .servicesTitle {
             font-size: 40px;
