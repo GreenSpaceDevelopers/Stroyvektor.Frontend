@@ -2,6 +2,7 @@ import { useCallback, useMemo, useRef, useState } from 'react';
 
 import { useCenterObserver } from '@shared/hooks/useCenterObserver';
 import { useDeviceType } from '@shared/hooks/useDeviceType';
+import { getImgUrl } from '@shared/utils';
 
 import serviceAdditionalLineUrl from '../../../assets/services/serviceAdditionalLine.svg';
 import { Service } from './Service/Service';
@@ -45,7 +46,7 @@ export const Services: React.FC = () => {
     );
 
     return (
-        <div className={styles.services} id="services">
+        <div className={styles.services} style={{ backgroundImage: `url(${getImgUrl('servicesBg.png')})` }} id="services">
             <h3 className={styles.servicesTitle}>создаём для вас</h3>
 
             <div className={styles.servicesBlocks}>

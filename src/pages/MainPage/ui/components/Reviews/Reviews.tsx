@@ -1,12 +1,14 @@
-import styles from './Reviews.module.scss';
 import { useEffect, useState } from 'react';
+
 import { Rating } from '@mantine/core';
 import { getYandexRatingByOrgId } from '@shared/api/yandex';
 import { useYMaps } from '@shared/hooks/useYMaps';
+import { IYMapRating } from '@entities/yandex/models/IYMapRating';
+import { getImgUrl } from '@shared/utils';
 
 import yandexIcon from '../../../assets/reviews/yandexIcon.svg';
 import yandexMapIcon from '../../../assets/reviews/yandexMapIcon.svg';
-import { IYMapRating } from '@entities/yandex/models/IYMapRating';
+import styles from './Reviews.module.scss';
 
 export const Reviews: React.FC = () => {
     const { ready, error } = useYMaps();
@@ -25,7 +27,7 @@ export const Reviews: React.FC = () => {
     }
 
     return (
-        <div className={styles.reviews}>
+        <div className={styles.reviews} style={{ backgroundImage: `url(${getImgUrl('reviewsBg.png')})` }}>
             <div className={styles.reviewsContent}>
                 <h3 className={styles.reviewsTitle}>Проверено клиентами</h3>
 

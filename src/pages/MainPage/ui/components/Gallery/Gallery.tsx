@@ -2,53 +2,55 @@ import clsx from 'clsx';
 
 import { Image, Box } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
-import * as object1 from '@pages/MainPage/assets/gallery/object1';
-import * as object2 from '@pages/MainPage/assets/gallery/object2';
-import * as object3 from '@pages/MainPage/assets/gallery/object3';
-import * as object4 from '@pages/MainPage/assets/gallery/object4';
+import { getImgUrl } from '@shared/utils';
 
 import styles from './Gallery.module.scss';
 
 const object1Imgs = [
-    object1.object1_1,
-    object1.object1_2,
-    object1.object1_3,
-    object1.object1_4,
-    object1.object1_5,
-    object1.object1_6,
+    getImgUrl('object1_1.png'),
+    getImgUrl('object1_2.png'),
+    getImgUrl('object1_3.png'),
+    getImgUrl('object1_4.png'),
+    getImgUrl('object1_5.png'),
+    getImgUrl('object1_6.png')
 ];
 
 const object2Imgs = [
-    object2.object2_1,
-    object2.object2_2,
-    object2.object2_3,
-    object2.object2_4,
-    object2.object2_5,
-    object2.object2_6,
-    object2.object2_6,
-    object2.object2_7,
-    object2.object2_8,
-    object2.object2_9,
+    getImgUrl('object2_1.png'),
+    getImgUrl('object2_2.png'),
+    getImgUrl('object2_3.png'),
+    getImgUrl('object2_4.png'),
+    getImgUrl('object2_5.png'),
+    getImgUrl('object2_6.png'),
+    getImgUrl('object2_6.png'),
+    getImgUrl('object2_7.png'),
+    getImgUrl('object2_8.png'),
+    getImgUrl('object2_9.png'),
 ];
 
 const object3Imgs = [
-    object3.object3_1,
-    object3.object3_2,
-    object3.object3_3,
-    object3.object3_4,
-    object3.object3_5,
-    object3.object3_6,
-    object3.object3_7,
-    object3.object3_8,
-    object3.object3_9,
-    object3.object3_10,
-    object3.object3_11,
-    object3.object3_12,
-    object3.object3_13,
-    object3.object3_14,
+    getImgUrl('object3_1.png'),
+    getImgUrl('object3_2.png'),
+    getImgUrl('object3_3.png'),
+    getImgUrl('object3_4.png'),
+    getImgUrl('object3_5.png'),
+    getImgUrl('object3_6.png'),
+    getImgUrl('object3_7.png'),
+    getImgUrl('object3_8.png'),
+    getImgUrl('object3_9.png'),
+    getImgUrl('object3_10.png'),
+    getImgUrl('object3_11.png'),
+    getImgUrl('object3_12.png'),
+    getImgUrl('object3_13.png'),
+    getImgUrl('object3_14.png'),
 ];
 
-const object4Imgs = [object4.object4_1, object4.object4_2, object4.object4_3, object4.object4_4];
+const object4Imgs = [
+    getImgUrl('object4_1.png'),
+    getImgUrl('object4_2.png'),
+    getImgUrl('object4_3.png'),
+    getImgUrl('object4_4.png'),
+];
 
 export const Gallery: React.FC = () => {
     return (
