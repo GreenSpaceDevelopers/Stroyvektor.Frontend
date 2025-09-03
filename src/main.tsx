@@ -10,7 +10,6 @@ import '@mantine/carousel/styles.css';
 import '@mantine/notifications/styles.css';
 import './index.css';
 
-const basename = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
