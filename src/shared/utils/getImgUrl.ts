@@ -1,0 +1,1 @@
+export const getImgUrl = (imgFileName: string) => import.meta.env.VITE_IMG_STORAGE_ENDPOINT_URL + imgFileName;

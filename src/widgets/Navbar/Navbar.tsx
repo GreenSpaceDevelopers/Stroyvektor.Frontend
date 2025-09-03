@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { Bars3Icon, PhoneIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { mainLogo } from '@shared/assets/icons/main';
 import useScreenWidth from '@shared/hooks/useScreenWidth';
 
-import mainLogo from '../../shared/assets/mainLogo.svg';
 import styles from './Navbar.module.scss';
-import { useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
     const { pathname } = useLocation();

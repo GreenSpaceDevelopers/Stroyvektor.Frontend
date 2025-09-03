@@ -1,6 +1,6 @@
 import { AboutUs, FormBlock, Gallery, Header, MapBlock, Reviews, Services } from './components';
 
-export const MainPage: React.FC = () => {
+const MainPage: React.FC = () => {
     return (
         <div>
             <Header />
@@ -13,3 +13,5 @@ export const MainPage: React.FC = () => {
         </div>
     );
 };
+
+export default MainPage;
