@@ -1,11 +1,9 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router-dom';
 
-const MainPage = lazy(() => import('@pages/index').then((m) => ({ default: m.MainPage })));
-const PrivacyPolicyPage = lazy(() =>
-    import('@pages/index').then((m) => ({ default: m.PrivacyPolicyPage })),
-);
-const NotFoundPage = lazy(() => import('@pages/index').then((m) => ({ default: m.NotFoundPage })));
+const MainPage = lazy(() => import('@pages/MainPage'));
+const PrivacyPolicyPage = lazy(() => import('@pages/PrivacyPolicyPage'));
+const NotFoundPage = lazy(() => import('@pages/MainPage'));
 
 export const routes: RouteObject[] = [
     { path: '/', element: <MainPage /> },

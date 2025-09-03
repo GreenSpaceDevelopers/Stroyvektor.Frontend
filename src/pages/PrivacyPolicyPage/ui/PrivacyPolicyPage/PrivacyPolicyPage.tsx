@@ -1,7 +1,6 @@
-2;
 import styles from './PrivacyPolicyPage.module.scss';
 
-export const PrivacyPolicyPage: React.FC = () => {
+const PrivacyPolicyPage: React.FC = () => {
     return (
         <div className={styles.privacyPolicyPage}>
             <h1>ПОЛИТИКА В ОТНОШЕНИИ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1><br />
@@ -445,3 +444,5 @@ export const PrivacyPolicyPage: React.FC = () => {
         </div>
     );
 };
+
+export default PrivacyPolicyPage;

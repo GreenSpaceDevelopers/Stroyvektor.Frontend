@@ -12,7 +12,7 @@ const object1Imgs = [
     getImgUrl('object1_3.png'),
     getImgUrl('object1_4.png'),
     getImgUrl('object1_5.png'),
-    getImgUrl('object1_6.png')
+    getImgUrl('object1_6.png'),
 ];
 
 const object2Imgs = [
