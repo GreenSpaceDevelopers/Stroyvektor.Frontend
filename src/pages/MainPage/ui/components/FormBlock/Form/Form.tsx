@@ -8,11 +8,11 @@ import { notifications } from '@mantine/notifications';
 import { TextInput } from '@shared/ui-kit/input';
 import { isValidPhone } from '@shared/utils';
 import sendMessage from '@shared/api/telegram';
-import useInputString from '@shared/hooks/useInputString';
 
 import formLineUrl from '../../../../assets/form/Line 2.svg';
 import { timeSlots } from '../timeSlots';
 import styles from './Form.module.scss';
+import { useInputString } from '@shared/hooks';
 
 type TimeSlot = (typeof timeSlots)[number]['id'];
 

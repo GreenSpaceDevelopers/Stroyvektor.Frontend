@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
 
-export default function useHover(ref: React.RefObject<HTMLElement>) {
+export function useHover(ref: React.RefObject<HTMLElement>) {
     const [isHovering, setHovering] = useState(false);
 
     const on = () => setHovering(true);
@@ -12,16 +12,16 @@ export default function useHover(ref: React.RefObject<HTMLElement>) {
         }
         const node = ref.current;
 
-        node.addEventListener('mouseenter', on)
-        node.addEventListener('mousemove', on)
-        node.addEventListener('mouseleave', off)
+        node.addEventListener('mouseenter', on);
+        node.addEventListener('mousemove', on);
+        node.addEventListener('mouseleave', off);
 
         return function () {
-            node.removeEventListener('mouseenter', on)
-            node.removeEventListener('mousemove', on)
-            node.removeEventListener('mouseleave', off)
+            node.removeEventListener('mouseenter', on);
+            node.removeEventListener('mousemove', on);
+            node.removeEventListener('mouseleave', off);
         };
-    }, [ref])
+    }, [ref]);
 
     return isHovering;
 }
