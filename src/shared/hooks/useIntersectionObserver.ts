@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 
-const useIntersectionObserver = (selector: string, className: string, threshold: number = 0.5) => {
+export function useIntersectionObserver(
+    selector: string,
+    className: string,
+    threshold: number = 0.5,
+) {
     useEffect(() => {
         function onEntry(entries: IntersectionObserverEntry[]) {
             entries.forEach((entry: IntersectionObserverEntry) => {
@@ -18,6 +22,4 @@ const useIntersectionObserver = (selector: string, className: string, threshold:
 
         return () => observer.disconnect();
     }, [selector, className, threshold]);
-};
-
-export default useIntersectionObserver;
+}
