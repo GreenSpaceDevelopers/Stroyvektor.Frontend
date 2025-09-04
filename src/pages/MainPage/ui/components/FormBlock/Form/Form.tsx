@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { BaseLoader } from '@shared/ui/BaseLoader/BaseLoader';
 import { IFormData } from '@entities/telegram/models/IFormData';
@@ -237,9 +238,9 @@ export const Form: React.FC = () => {
                     <p className={styles.formButtonDesk}>
                         Нажимая кнопку «Отправить», Вы даёте согласие на обработку персональных
                         данных и соглашаетесь с{' '}
-                        <a className={styles.formButtonDeskPrivacyPolicy} href="/privacyPolicy">
+                        <Link className={styles.formButtonDeskPrivacyPolicy} to="/privacyPolicy">
                             Политикой конфиденциальности
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>
