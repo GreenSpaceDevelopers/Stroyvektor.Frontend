@@ -6,11 +6,12 @@ import { notifications } from '@mantine/notifications';
 import { tryCopyTextAsync } from '@shared/utils';
 import { tgIcon, vkIcon } from '@shared/assets/icons/socials';
 import { mainLogo } from '@shared/assets/icons/main';
+import { CompanyConstants } from '@shared/constants';
 
 import styles from './Footer.module.scss';
 
 const copyEmail = () => {
-    tryCopyTextAsync(import.meta.env.VITE_COMPANY_EMAIL);
+    tryCopyTextAsync(CompanyConstants.CompanyEmail.value);
     notifications.show({
         color: 'green',
         title: 'Скопировано',
@@ -30,14 +31,14 @@ export const Footer: React.FC = () => {
                     <div className={styles.footerUpperLinks}>
                         <a
                             className={styles.footerUpperLink}
-                            href="https://yandex.ru/maps/-/CLEVYEi9"
+                            href={CompanyConstants.CompanyYMaps.link}
                             target="_blank"
                         >
                             <MapPinIcon className={styles.footerUpperIcon} />
                         </a>
                         <a
                             className={styles.footerUpperLink}
-                            href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
+                            href={`tel:${CompanyConstants.CompanyPhone.value}`}
                         >
                             <PhoneIcon className={styles.footerUpperIcon} />
                         </a>
@@ -46,7 +47,7 @@ export const Footer: React.FC = () => {
                         </a>
                         <a
                             className={styles.footerUpperLink}
-                            href={import.meta.env.VITE_COMPANY_TG}
+                            href={CompanyConstants.CompanyTg.link}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -54,7 +55,7 @@ export const Footer: React.FC = () => {
                         </a>
                         <a
                             className={styles.footerUpperLink}
-                            href={import.meta.env.VITE_COMPANY_VK}
+                            href={CompanyConstants.CompanyVk.link}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -86,9 +87,9 @@ export const Footer: React.FC = () => {
                             <p>Р/с № 40702810 2200 0020 6340</p>
                             <p>ИНН 7814851677</p>
                             <p>КПП 781401001</p>
-                            <p>+7 (993) 976-16-60</p>
+                            <p>{CompanyConstants.CompanyPhoneNormalize.value}</p>
                             <p className={styles.footerCenterBlockStyles}>
-                                {import.meta.env.VITE_COMPANY_EMAIL}
+                                {CompanyConstants.CompanyEmail.value}
                             </p>
                             <p className={styles.footerCenterBlockStyles}>стройвектор78.рф</p>
                         </div>

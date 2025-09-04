@@ -62,7 +62,8 @@
 
     h1 {
         font-size: $font-size-xl;
-        p-transform: uppercase;
+        text-transform: uppercase;
+        font-weight: normal;
     }
 
     svg {

@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import { Bars3Icon, PhoneIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { mainLogo } from '@shared/assets/icons/main';
+import { CompanyConstants } from '@shared/constants';
 import useScreenWidth from '@shared/hooks/useScreenWidth';
 
 import styles from './Navbar.module.scss';
@@ -55,9 +56,9 @@ export const Navbar: React.FC = () => {
                             <PhoneIcon className={styles.navbarContentPhoneIcon} />
                             <a
                                 className={styles.navbarContentPhoneNumber}
-                                href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
+                                href={`tel:${CompanyConstants.CompanyPhone.value}`}
                             >
-                                {import.meta.env.VITE_COMPANY_PHONE_NORMALIZE}
+                                {CompanyConstants.CompanyPhoneNormalize.value}
                             </a>
                         </div>
                     )}
@@ -125,10 +126,10 @@ export const Navbar: React.FC = () => {
                             <PhoneIcon className={styles.navbarBurgerMenuContentPhoneIcon} />
                             <a
                                 className={styles.navbarBurgerMenuContentNumber}
-                                href={`tel:${import.meta.env.VITE_COMPANY_PHONE}`}
+                                href={`tel:${CompanyConstants.CompanyPhone.value}`}
                                 onClick={() => setMenuVisible(false)}
                             >
-                                {import.meta.env.VITE_COMPANY_PHONE_NORMALIZE}
+                                {CompanyConstants.CompanyPhoneNormalize.value}
                             </a>
                         </div>
                     )}
