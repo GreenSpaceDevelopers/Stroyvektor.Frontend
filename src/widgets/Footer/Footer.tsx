@@ -3,10 +3,10 @@ import { useLocation } from 'react-router-dom';
 
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { notifications } from '@mantine/notifications';
-import { tryCopyTextAsync } from '@shared/utils';
+import { getImgUrl, tryCopyTextAsync } from '@shared/utils';
 import { tgIcon, vkIcon } from '@shared/assets/icons/socials';
 import { mainLogo } from '@shared/assets/icons/main';
-import { CompanyConstants } from '@shared/constants';
+import { BucketsConstants, CompanyConstants } from '@shared/constants';
 
 import styles from './Footer.module.scss';
 
@@ -33,6 +33,7 @@ export const Footer: React.FC = () => {
                             className={styles.footerUpperLink}
                             href={CompanyConstants.CompanyYMaps.link}
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <MapPinIcon className={styles.footerUpperIcon} />
                         </a>
@@ -71,7 +72,13 @@ export const Footer: React.FC = () => {
                         <a href="#services">Услуги</a>
                         <a href="#gallery">Портфолио</a>
                         <a href="#mapBlock">Контакты</a>
-                        <a href="/privacyPolicy">Политика конфиденциальности</a>
+                        <a
+                            href={getImgUrl('PrivacyPolicy.pdf', BucketsConstants.DocsBucket)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Политика конфиденциальности
+                        </a>
                     </div>
 
                     <div className={styles.footerCenterBlockCompanyInfo}>

@@ -1,14 +1,14 @@
 import clsx from 'clsx';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { BaseLoader } from '@shared/ui/BaseLoader/BaseLoader';
 import { IFormData } from '@entities/telegram/models/IFormData';
 import { messengerType } from '@shared/types/messengerType';
 import { notifications } from '@mantine/notifications';
 import { TextInput } from '@shared/ui-kit/input';
-import { isValidPhone } from '@shared/utils';
+import { getImgUrl, isValidPhone } from '@shared/utils';
 import { useInputString } from '@shared/hooks';
+import { BucketsConstants } from '@shared/constants';
 import sendMessage from '@shared/api/telegram';
 
 import { timeSlots } from '../timeSlots';
@@ -238,9 +238,14 @@ export const Form: React.FC = () => {
                     <p className={styles.formButtonDesk}>
                         Нажимая кнопку «Отправить», Вы даёте согласие на обработку персональных
                         данных и соглашаетесь с{' '}
-                        <Link className={styles.formButtonDeskPrivacyPolicy} to="/privacyPolicy">
+                        <a
+                            className={styles.formButtonDeskPrivacyPolicy}
+                            href={getImgUrl('PrivacyPolicy.pdf', BucketsConstants.DocsBucket)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Политикой конфиденциальности
-                        </Link>
+                        </a>
                     </p>
                 </div>
             </div>
